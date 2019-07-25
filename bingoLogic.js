@@ -27,6 +27,7 @@ bingo.bingo = function (goals) {
 
   var generateLink = document.getElementById("generateLink");
   var similarityCheckbox = document.getElementById('allowSimilar');
+  var seedInput = document.getElementById('seed');
   var difficultyPatternCheckbox = document.getElementById('randomDifficultyPattern');
   var tipText = document.getElementById("tipText");
 
@@ -50,6 +51,8 @@ bingo.bingo = function (goals) {
       link += '&randomDifficultyPattern=true';
     if(difficultyCheckbox.checked == true)
       link += '&showDifficulty=true';
+	if(seedInput.value != "")
+	  link += '&seed=' + seedInput.value;
     generateLink.href = link;
   });
 
