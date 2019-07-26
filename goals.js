@@ -15,6 +15,11 @@ easyGoals = [
 "Hold 5 Dekuseeds|5seeds",
 "3 Gears|3gears",
 "Wake the Zora Prince|zoraPrince",
+"Get Scroll of Enchant Weapon from the beach fountain|beachFountain",
+"Get Ring of Blasting from the mountain fountain|mountainFountain",
+"Get Ring of Risk from the swamp fountain|swampFountain",
+"Get Scroll of Need from the beach mimic|beachMimic",
+"Kill the keymos|keymos"
 ]
 
 mediumGoals = [
@@ -77,6 +82,19 @@ hardGoals = [
 "Unlock Yves|yves",
 "Eli's Greatshovel|eliShovel",
 "Hold 8 Keys|8keys",
+]
+
+challengeGoals = [
+"Start as Link|linkStart|You can go to Zelda's room for a map peek, but you must still start as Link.",
+"Don't get the power glove|noGlove",
+"Don't infuse any weapons|noInfuse|The special daggers/shortswords can still be used.",
+"Don't visit any Cadence caves|noCadenceCaves|You can still get the lute from I AM ERROR or in the castle infusion room.",
+"Don't open any purple dungeon chests|noDungeonChests",
+"Don't use any bombs|noBombs|You can pick up bombs, but you cannot use them.  Bombchus and Din's Fire are allowed.",
+"Don't spend any diamonds|noDiamonds|The diamond coupon can still be used.",
+"Don't kill any shopkeepers|saveFreddie",
+"Don't pick up any heart containers|noHeartContainers|Heart peices are allowed.",
+"Don't get the Zora's flippers|noFlippers",
 ]
 
 

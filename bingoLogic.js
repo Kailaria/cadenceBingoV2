@@ -63,31 +63,35 @@ bingo.bingo = function (goals) {
   results.append ("<p></p>");
 
   this.hardPositions = [2,9,11,18,20];
-  this.mediumPositions = [0,3,5,7,12,14,16,19,21,23];
-  this.easyPositions = [1,4,6,8,10,13,15,17,22,24];
+  this.mediumPositions = [1,4,6,8,10,13,15,17,22,24];
+  this.easyPositions = [0,3,5,7,14,16,19,21,23];
+  this.challengePositions = [12];
 
   readGoals("hard", hardGoals);
   readGoals("medium", mediumGoals);
   readGoals("easy", easyGoals);
+  readGoals("challenge", challengeGoals);
 
   if(!shouldAllowSimilar) {
     //compute the exclusions of the goals
     makeExclusions(goals["hard"]);
     makeExclusions(goals["medium"]);
     makeExclusions(goals["easy"]);
+    makeExclusions(goals["challenge"]);
   }
 
   bingoBoard = [];
   var invalidNames = [];
 
   if(shouldRandomDifficultyPattern) {
-    allGoals = goals["hard"].concat(goals["medium"], goals["easy"]);
-    allPositions = this.hardPositions.concat(this.mediumPositions, this.easyPositions);
+    allGoals = goals["hard"].concat(goals["medium"], goals["easy"],goals["challenge"]);
+    allPositions = this.hardPositions.concat(this.mediumPositions, this.easyPositions, this.challengePositions);
     addGoals(bingoBoard, allGoals, allPositions, invalidNames);
   } else {
     addGoals(bingoBoard, goals["hard"], this.hardPositions, invalidNames);
     addGoals(bingoBoard, goals["medium"], this.mediumPositions, invalidNames);
     addGoals(bingoBoard, goals["easy"], this.easyPositions, invalidNames);
+    addGoals(bingoBoard, goals["challenge"], this.challengePositions, invalidNames);
   }
 
   //populate the actual table on the page

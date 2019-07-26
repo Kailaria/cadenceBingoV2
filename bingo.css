@@ -34,6 +34,7 @@
 #bingo tr td.hard { background:#FFE9E9; }
 #bingo tr td.medium { background:#FFFFE9; }
 #bingo tr td.easy { background:#F2F2FF; }
+#bingo tr td.challenge { background:#FFE9FF; }
 
 #bingo tr td.greensquare { background:#75E075; }
 #bingo tr td.redsquare { background:#E08566; }
