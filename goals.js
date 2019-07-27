@@ -6,7 +6,7 @@ easyGoals = [
 "Big Bomb Bag|bombBag",
 "Big Quiver|quiver",
 "Activate 5 Sheikah Stones|5stones",
-"Defeat Freddy|freddy",
+"Defeat Freddie|freddie",
 "Snorkel|snorkel",
 "Touch the Bench|bench",
 "Gerudo Village Puzzle|gerudoPuzzle",
@@ -73,8 +73,8 @@ hardGoals = [
 "Defeat Bass Guitarmos Knights#bonus#|bass",
 "Defeat Gohmaracas#bonus#|maracas",
 "Defeat Octavo|octavo",
-"Defeat Ganon|ganon",
-"Defeat Dark Freddy|darkFreddy",
+"Defeat Ganon#bonus#|ganon",
+"Defeat Dark Freddie|darkFreddie",
 "5 Mapping Items|5mapItems",
 "Activate 15 Sheikah Stones|15stones",
 "Full Map Seen|allSeen",
@@ -103,7 +103,7 @@ bonusRequirements = [
 " as Link",
 " as Cadence",
 " using base dagger/shortsword",
-"",
+" without using items",
 ]
 
 var exclusions = [
