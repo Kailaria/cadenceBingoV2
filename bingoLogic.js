@@ -28,6 +28,7 @@ bingo.bingo = function (goals) {
   var generateLink = document.getElementById("generateLink");
   var similarityCheckbox = document.getElementById('allowSimilar');
   var seedInput = document.getElementById('seed');
+  document.getElementById('currentSeed').innerText = "Current Seed: " + seed;
   var difficultyPatternCheckbox = document.getElementById('randomDifficultyPattern');
   var tipText = document.getElementById("tipText");
 
@@ -180,6 +181,10 @@ bingo.bingo = function (goals) {
       var parts = goalStr.split('|');
       var goal = {};
       goal.label = parts[0];
+	  if (goal.label.search("#bonus#") != -1) {
+		  var bonusStr = bonusRequirements[Math.floor(bonusRequirements.length*Math.random())]
+		  goal.label = goal.label.replace("#bonus#",bonusStr)
+	  }
       goal.name = parts[1];
 	  goal.tip = parts[2];
 	  if(goal.tip == null) {

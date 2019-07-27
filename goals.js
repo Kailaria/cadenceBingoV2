@@ -68,10 +68,10 @@ mediumGoals = [
 ]
 
 hardGoals = [
-"Oboe|oboe",
-"Glockenspiel|glockenspiel",
-"Bass Guitar|bass",
-"Maracas|maracas",
+"Defeat Wizroboe#bonus#|oboe",
+"Defeat Gleeokenspiel#bonus#|glockenspiel",
+"Defeat Bass Guitarmos Knights#bonus#|bass",
+"Defeat Gohmaracas#bonus#|maracas",
 "Defeat Octavo|octavo",
 "Defeat Ganon|ganon",
 "Defeat Dark Freddy|darkFreddy",
@@ -82,6 +82,7 @@ hardGoals = [
 "Unlock Yves|yves",
 "Eli's Greatshovel|eliShovel",
 "Hold 8 Keys|8keys",
+"All Four Future Hyrule Legendary Weapons|legendaryWeapons|Hylian Flail, Fragarach, Impa's Nagintana, and Jeweled Dagger/Kokiri Sword are required.  The other legendary weapons are not required."
 ]
 
 challengeGoals = [
@@ -95,8 +96,15 @@ challengeGoals = [
 "Don't kill any shopkeepers|saveFreddie",
 "Don't pick up any heart containers|noHeartContainers|Heart peices are allowed.",
 "Don't get the Zora's flippers|noFlippers",
+"Skip Nayru's Love in Hyrule Castle|skipNayru|You can still pick up the shield (which includes Nayru's Love) at Link's house."
 ]
 
+bonusRequirements = [
+" as Link",
+" as Cadence",
+" using base dagger/shortsword",
+"",
+]
 
 var exclusions = [
 ];
