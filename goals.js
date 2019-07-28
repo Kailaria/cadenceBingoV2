@@ -44,8 +44,6 @@ mediumGoals = [
 "Open 2 Fairy Fountains|2fountains",
 "Get Stamina Increase|staminaUp",
 "4 Gears|4gears",
-"Royal Rapier|royalRapier",
-"Caladbolg|caladbolg",
 "4 Special Daggers / Shortswords|4daggers",
 "I AM ERROR|iAmError",
 "Hold 250 Rupees|250rupees",
@@ -53,8 +51,8 @@ mediumGoals = [
 "Hold 10 Diamonds|10diamonds",
 "Hold 15 Diamonds|15diamonds",
 "Infuse Weapon|infuse",
-"Timed Blue Chest|timedBlue",
-"Flawless Purple Chest|flawlessPurple",
+//"Timed Blue Chest|timedBlue",
+//"Flawless Purple Chest|flawlessPurple",
 "Defeat 2 Dark Stairs Minibosses|2darkStairs",
 "Defeat 3 Dark Stairs Minibosses|3darkStairs",
 "Open 2 Puzzle Cave Purple Chests|2puzzleCaves",
@@ -73,18 +71,15 @@ hardGoals = [
 "Defeat Gleeokenspiel#bonus#|glockenspiel",
 "Defeat Bass Guitarmos Knights#bonus#|bass",
 "Defeat Gohmaracas#bonus#|maracas",
-"Defeat Octavo|octavo",
-"Defeat Ganon#bonus#|ganon",
-"Defeat Dark Freddie|darkFreddie",
+//"Defeat Dark Freddie|darkFreddie",
 "5 Mapping Items|5mapItems|All of Cave / Treasure / Skull / Warp Charm and Telescope",
 "Activate 25 Sheikah Stones|25stones",
 "Full Map Seen|allSeen|You do not have to visit every tile, but the entire map must be visible.",
-//"Full Map Explored|allExplored",
-"Unlock Yves|yves",
-"Eli's Greatshovel|eliShovel",
+//"Eli's Greatshovel|eliShovel",
 "Hold 8 Keys|8keys",
 "Hold 1000 Rupees|1000rupees",
-"All Four Future Hyrule Legendary Weapons|legendaryWeapons|Hylian Flail, Fragarach, Impa's Nagintana, and Jeweled Dagger/Kokiri Sword are required.  The other legendary weapons are not required."
+"Royal Rapier|royalRapier",
+"Caladbolg|caladbolg",
 ]
 
 challengeGoals = [
@@ -95,6 +90,7 @@ challengeGoals = [
 "Don't open any purple dungeon chests|noDungeonChests",
 "Don't use any bombs|noBombs|You can pick up bombs, but you cannot use them.  Bombchus and Din's Fire are allowed.",
 "Don't spend any diamonds|noDiamonds|The diamond coupon can still be used.",
+"Don't spend any rupees|noRupees|You can still steal and use coupons. If your rupee count ever decreases you lose this square.",
 "Don't kill any shopkeepers|saveFreddie",
 "Don't pick up any heart containers|noHeartContainers|Heart peices are allowed.",
 "Don't get the Zora's Flippers|noFlippers",
@@ -104,9 +100,17 @@ challengeGoals = [
 
 bonusRequirements = [
 " as Link",
-//" as Cadence",
 " using base dagger / shortsword",
 " without using items or L/R skills",
+""
+]
+
+finalGoals = [
+"Defeat Octavo|octavo",
+"Defeat Ganon|ganon",
+"Fully Explore the Map|allExplored",
+"Unlock Yves|yves",
+"All Four Future Hyrule Legendary Weapons|legendaryWeapons|Hylian Flail, Fragarach, Impa's Nagintana, and Jeweled Dagger/Kokiri Sword are required.  The other legendary weapons are not required."
 ]
 
 var exclusions = [
@@ -114,5 +118,4 @@ var exclusions = [
 ["noCadenceCaves","shieldTechnique"],
 ["noInfuse","infuse"],
 ["saveFreddie","freddie"],
-["saveFreddie","darkFreddie"],
 ];

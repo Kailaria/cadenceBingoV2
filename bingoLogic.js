@@ -67,21 +67,25 @@ bingo.bingo = function (goals) {
   this.mediumPositions = [1,4,6,8,10,13,15,17,22,24];
   this.easyPositions = [0,3,5,7,14,16,19,21,23];
   this.challengePositions = [12];
+  this.finalPosition = [0];
 
   readGoals("hard", hardGoals);
   readGoals("medium", mediumGoals);
   readGoals("easy", easyGoals);
   readGoals("challenge", challengeGoals);
+  readGoals("final", finalGoals);
 
   if(!shouldAllowSimilar) {
     //compute the exclusions of the goals
+    makeExclusions(goals["final"]);
+    makeExclusions(goals["challenge"]);
     makeExclusions(goals["hard"]);
     makeExclusions(goals["medium"]);
     makeExclusions(goals["easy"]);
-    makeExclusions(goals["challenge"]);
   }
 
   bingoBoard = [];
+  finalGoal = [];
   var invalidNames = [];
 
   if(shouldRandomDifficultyPattern) {
@@ -94,6 +98,11 @@ bingo.bingo = function (goals) {
     addGoals(bingoBoard, goals["easy"], this.easyPositions, invalidNames);
     addGoals(bingoBoard, goals["challenge"], this.challengePositions, invalidNames);
   }
+  
+  //create win condition
+  addGoals(finalGoal, goals["final"], this.finalPosition, invalidNames);
+  document.getElementById('finalGoal').innerText = finalGoal[0].label;
+  
 
   //populate the actual table on the page
   for (var i=0; i<25; i++) {
