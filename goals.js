@@ -15,11 +15,11 @@ easyGoals = [
 "Hold 5 Dekuseeds|5seeds",
 "3 Gears|3gears",
 "Wake the Zora Prince|zoraPrince",
-"Get Scroll of Enchant Weapon from the beach fountain|beachFountain",
+//"Get Scroll of Enchant Weapon from the beach fountain|beachFountain",
 "Get Ring of Blasting from the mountain fountain|mountainFountain",
 "Get Ring of Risk from the swamp fountain|swampFountain",
-"Get Scroll of Need from the beach mimic|beachMimic",
-"Kill Keymos|keymos"
+//"Get Scroll of Need from the beach mimic|beachMimic",
+"Kill Keymos|keymos",
 ]
 
 mediumGoals = [
@@ -63,19 +63,31 @@ mediumGoals = [
 "Bee in a Bottle|beeBottle",
 "Anti-Fairy in a Bottle|antifairyBottle",
 "Fish in a Bottle|fishBottle",
-"Clear the Hover Shrine|hoverShrine|You do not need to open the chest once you clear the screen."
+"Clear the Hover Shrine|hoverShrine|You do not need to open the chest once you clear the screen.",
 ]
 
 hardGoals = [
-"Defeat Wizroboe#bonus#|oboe",
-"Defeat Gleeokenspiel#bonus#|glockenspiel",
-"Defeat Bass Guitarmos Knights#bonus#|bass",
-"Defeat Gohmaracas#bonus#|maracas",
-//"Defeat Dark Freddie|darkFreddie",
+"Defeat Wizroboe|oboe",
+"Defeat Wizroboe as Link|oboeLink",
+"Defeat Wizroboe as Cadence|oboeCadence",
+"Defeat Wizroboe without using explosives|oboeNoBombs|Bombs, Bombchus, Din's Fire, and Bomb Fairies are all banned.",
+"Defeat Gleeokenspiel|glockenspiel",
+"Defeat Gleeokenspiel as Link|glockenspielLink",
+"Defeat Gleeokenspiel as Cadence|glockenspielCadence",
+"Defeat Gleeokenspiel without using explosives|glockenspielNoBombs|Bombs, Bombchus, Din's Fire, and Bomb Fairies are all banned.",
+"Defeat Gleeokenspiel after killing every Gleeokenspiel Head|glockenspielAllHeads",
+"Defeat Bass Guitarmos Knights|bass",
+"Defeat Bass Guitarmos Knights as Link|bassLink",
+"Defeat Bass Guitarmos Knights as Cadence|bassCadence",
+"Defeat Gohmaracas|maracas",
+"Defeat Gohmaracas as Link|maracasLink",
+"Defeat Gohmaracas as Cadence|maracasCadence",
+"Defeat Gohmaracas after breaking every bush in the arena|maracasAllBushes",
+"Defeat Dark Freddie|darkFreddie",
 "5 Mapping Items|5mapItems|All of Cave / Treasure / Skull / Warp Charm and Telescope",
 "Activate 25 Sheikah Stones|25stones",
 "Full Map Seen|allSeen|You do not have to visit every tile, but the entire map must be visible.",
-//"Eli's Greatshovel|eliShovel",
+"Eli's Greatshovel|eliShovel",
 "Hold 8 Keys|8keys",
 "Hold 1000 Rupees|1000rupees",
 "Royal Rapier|royalRapier",
@@ -92,17 +104,18 @@ challengeGoals = [
 "Don't spend any diamonds|noDiamonds|The diamond coupon can still be used.",
 "Don't spend any rupees|noRupees|You can still steal and use coupons. If your rupee count ever decreases you lose this square.",
 "Don't kill any shopkeepers|saveFreddie",
-"Don't pick up any heart containers|noHeartContainers|Heart peices are allowed.",
+"Don't pick up any heart containers|noHeartContainers|Heart pieces are allowed.",
 "Don't get the Zora's Flippers|noFlippers",
 "Skip Nayru's Love in Hyrule Castle|skipNayru|You can still pick up the shield (which includes Nayru's Love) at Link's house.",
 "No Major Dungeon Skips|noMajorSkips|1F skips and boss key skips are banned. For each dungeon floor, you must enter through the entrance, kill the miniboss, and exit through the exit.  Gear skip is also banned.",
 ]
 
+//now obsolete
 bonusRequirements = [
 " as Link",
 " using base dagger / shortsword",
 " without using items or L/R skills",
-""
+"",
 ]
 
 finalGoals = [
@@ -110,7 +123,8 @@ finalGoals = [
 "Defeat Ganon|ganon",
 "Fully Explore the Map|allExplored",
 "Unlock Yves|yves",
-"All Four Future Hyrule Legendary Weapons|legendaryWeapons|Hylian Flail, Fragarach, Impa's Nagintana, and Jeweled Dagger/Kokiri Sword are required.  The other legendary weapons are not required."
+"All Four Future Hyrule Legendary Weapons|legendaryWeapons|Hylian Flail, Fragarach, Impa's Nagintana, and Jeweled Dagger/Kokiri Sword are required.  The other legendary weapons are not required.",
+"All Three Character-Specific Legendary Weapons|characterWeapons|Royal Rapier, Caladbolg, and Eli's Greatshovel are all required.  The other legendary weapons are not required.",
 ]
 
 var exclusions = [
@@ -118,4 +132,25 @@ var exclusions = [
 ["noCadenceCaves","shieldTechnique"],
 ["noInfuse","infuse"],
 ["saveFreddie","freddie"],
+["octavo","ganon","legendaryWeapons","characterWeapons","oboe"],
+["octavo","ganon","legendaryWeapons","characterWeapons","glockenspiel"],
+["octavo","ganon","legendaryWeapons","characterWeapons","maracas"],
+["octavo","ganon","legendaryWeapons","characterWeapons","bass"],
+["octavo","ganon","legendaryWeapons","characterWeapons","wakeLink"],
+["characterWeapons","caladbolg"],
+["characterWeapons","royalRapier"],
+["yves","5seeds"],
+["yves","staminaUp"],
+["yves","tinglePuzzle"],
+["allExplored","fourCorners"],
+["allExplored","allSeen"],
+["noCadenceCaves","bassCadence"],
+["noCadenceCaves","glockenspielCadence"],
+["noCadenceCaves","oboeCadence"],
+["noCadenceCaves","maracasCadence"],
+["3bottles","noDiamonds"],
+["yves","allExplored","caladbolg"],
+["yves","allExplored","royalRapier"],
+["yves","allExplored","darkFreddie"],
+["yves","allExplored","octavo","characterWeapons","eliShovel"],
 ];
