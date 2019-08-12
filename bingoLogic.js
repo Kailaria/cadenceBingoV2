@@ -88,6 +88,10 @@ bingo.bingo = function (goals) {
   finalGoal = [];
   var invalidNames = [];
 
+
+  //create win condition
+  addGoals(finalGoal, goals["final"], this.finalPosition, invalidNames);
+
   if(shouldRandomDifficultyPattern) {
     allGoals = goals["hard"].concat(goals["medium"], goals["easy"],goals["challenge"]);
     allPositions = this.hardPositions.concat(this.mediumPositions, this.easyPositions, this.challengePositions);
@@ -99,8 +103,6 @@ bingo.bingo = function (goals) {
     addGoals(bingoBoard, goals["challenge"], this.challengePositions, invalidNames);
   }
   
-  //create win condition
-  addGoals(finalGoal, goals["final"], this.finalPosition, invalidNames);
   document.getElementById('finalGoal').innerText = finalGoal[0].label;
   
 
@@ -190,10 +192,6 @@ bingo.bingo = function (goals) {
       var parts = goalStr.split('|');
       var goal = {};
       goal.label = parts[0];
-	  if (goal.label.search("#bonus#") != -1) {
-		  var bonusStr = bonusRequirements[Math.floor(bonusRequirements.length*Math.random())]
-		  goal.label = goal.label.replace("#bonus#",bonusStr)
-	  }
       goal.name = parts[1];
 	  goal.tip = parts[2];
 	  if(goal.tip == null) {
