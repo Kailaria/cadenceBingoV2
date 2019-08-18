@@ -15,10 +15,8 @@ easyGoals = [
 "Hold 5 Dekuseeds|5seeds",
 "3 Gears|3gears",
 "Wake the Zora Prince|zoraPrince",
-//"Get Scroll of Enchant Weapon from the beach fountain|beachFountain",
-"Get Ring of Blasting from the mountain fountain|mountainFountain",
-"Get Ring of Risk from the swamp fountain|swampFountain",
-//"Get Scroll of Need from the beach mimic|beachMimic",
+//"Get Ring of Blasting from the mountain fountain|mountainFountain",  //apparently not guaranteed to spawn
+//"Get Ring of Risk from the swamp fountain|swampFountain",
 "Kill Keymos|keymos",
 ]
 
@@ -31,8 +29,8 @@ mediumGoals = [
 "Lost Swamp F2 Miniboss|swamp2",
 "Temple of Storms F1 Miniboss|storms1",
 "Temple of Storms F2 Miniboss|storms2",
-"3 Mapping Items|3mapItems|Three of Cave / Treasure / Skull / Warp Charm and Telescope",
-"4 Mapping Items|4mapItems|Four of Cave / Treasure / Skull / Warp Charm and Telescope",
+"3 Overworld Mapping Items|3mapItems|Three of Cave / Treasure / Skull / Warp Charm and Telescope",
+"4 Overworld Mapping Items|4mapItems|Four of Cave / Treasure / Skull / Warp Charm and Telescope",
 "Open 2 Potion Shops|2potions",
 "Open 3 Potion Shops|3potions",
 "Have 10 Hearts|10hearts",
@@ -58,9 +56,8 @@ mediumGoals = [
 //"Timed Blue Chest|timedBlue",
 //"Flawless Purple Chest|flawlessPurple",
 "Defeat 2 Dark Stairs Minibosses|2darkStairs",
-"Defeat 3 Dark Stairs Minibosses|3darkStairs",
-"Open 2 Puzzle Cave Purple Chests|2puzzleCaves",
-"Open 3 Puzzle Cave Purple Chests|3puzzleCaves",
+"Defeat 3 Dark Stairs Minibosses|3darkStairs", //still unsure if this is always possible
+"Open 2 Puzzle Cave Purple Chests|2puzzleCaves|Puzzle caves are the ones with round entrances.  One always appears by Zelda's tower, and one always appears by Link's house.",
 "Unlock Link/Zelda|wakeLink",
 "Unlock Cadence|cadence",
 "Fairy in a Bottle|fairyBottle",
@@ -90,7 +87,7 @@ hardGoals = [
 "Defeat Gohmaracas using base dagger / shortsword|maracasBase|Items and skills are allowed.",
 "Defeat Gohmaracas after breaking every bush in the arena|maracasAllBushes",
 "Defeat Dark Freddie|darkFreddie",
-"5 Mapping Items|5mapItems|All of Cave / Treasure / Skull / Warp Charm and Telescope",
+"5 Overworld Mapping Items|5mapItems|All of Cave / Treasure / Skull / Warp Charm and Telescope",
 "Activate 25 Sheikah Stones|25stones",
 "Full Map Seen|allSeen|You do not have to visit every tile, but the entire map must be visible.",
 "Eli's Greatshovel|eliShovel",
@@ -116,21 +113,16 @@ challengeGoals = [
 "No Major Dungeon Skips|noMajorSkips|1F skips and boss key skips are banned. For each dungeon floor, you must enter through the entrance, kill the miniboss, and exit through the exit.  Gear skip is also banned.",
 ]
 
-//now obsolete
-bonusRequirements = [
-" as Link",
-" using base dagger / shortsword",
-" without using items or L/R skills",
-"",
-]
 
 finalGoals = [
 "Defeat Octavo|octavo",
 "Defeat Ganon|ganon",
 "Fully Explore the Map|allExplored",
 "Unlock Yves|yves",
-"All Four Future Hyrule Legendary Weapons|legendaryWeapons|Hylian Flail, Fragarach, Impa's Nagintana, and Jeweled Dagger/Kokiri Sword are required.  The other legendary weapons are not required.",
+"All Four Future Hyrule Legendary Weapons|legendaryWeapons|Hylian Flail, Fragarach, Impa's Nagintana, and Jeweled Dagger / Kokiri Sword are required.  The other legendary weapons are not required.",
 "All Three Character-Specific Legendary Weapons|characterWeapons|Royal Rapier, Caladbolg, and Eli's Greatshovel are all required.  The other legendary weapons are not required.",
+"All Permanent Usable Items|allItems|All permenent items and their respective upgrades, including L/R skills. Passive items and capacity upgrades are not required.",
+"One Permanent Weapon of Each Type|allWeapons|Glass weapons do not count, but legendary weapons do.  You must have a shortsword, dagger, broadsword, spear, flail, longsword, rapier, and greatshovel."
 ]
 
 var exclusions = [
@@ -167,4 +159,5 @@ var exclusions = [
 ["allExplored","exploreDesert"],
 ["allExplored","exploreSwamp"],
 ["allExplored","exploreMountains"],
+["allItems","noDungeonChests"]
 ];
