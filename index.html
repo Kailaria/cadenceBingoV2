@@ -23,8 +23,13 @@
 <script src="goals.js" type="text/javascript"></script>
 
 <div id="stuff">
+<div id="preboard">
+<p>Board is hidden now.</p>
+<button onclick="revealBoard()">Click to reveal board.</button>
+</div>
 <div id="board">
 <p id="toWin">To win, get three full lines and <b id="finalGoal"></b></p>
+<p id="finalDescription"></p>
 <table id="bingo" cellspacing="4" cellpadding="7"><tr>
 <td id="slot0"></td>
 <td id="slot1"></td>
@@ -57,24 +62,25 @@
 <td id="slot24"></td>
 </tr></table>
 <div id="tip"><p id="tipText"></p></div>
-<p id="currentSeed">Seed:</p>
+<p>Seed: <b id="currentSeed"></b></p>
 <p><label><input type="checkbox" id="showDifficulty">Show difficulty</input></label></p>
 </div>
 
 <div id="generation">
 <p><a href="#" id="generateLink">Generate new card</a>
 <p><label><input type="text" id="seed">Seed</input><label></p>
-<p><label><input type="checkbox" id="allowSimilar">Allow Multiple Similar Goals</input><label></p>
+<p><label><input type="checkbox" id="allowSimilar">Allow Conflicting Goals</input><label></p>
 <p><label><input type="checkbox" id="randomDifficultyPattern">Randomize Difficulty Pattern</input><label></p>
+<p><label><input type="checkbox" id="hideBoard">Hide Board When Generated</input><label></p>
 </div>
  <div id="explanation">
-<p>This is a bingo card for Cadence of Hyrule, based off of Hyphen-ated's <a href="https://github.com/Hyphen-ated/isaacBingo" id=isaacLink>isaacBingo</a>. When you get the 5 squares in any row, column, or diagonal, you win.</p>
+<p>This is a bingo card for Cadence of Hyrule, based off of Hyphen-ated's <a href="https://github.com/Hyphen-ated/isaacBingo" id=isaacLink>isaacBingo</a>.</p>
 <p>You can reset and do multiple runs, but in order to check off a square you have to finish that goal during a single run. All runs must be done on the same seed.</p>
 <p>In the standard difficulty pattern, the center square is always a challenge or restriction. You may mark the square at the start, but if you ever fail the challenge, you must unmark it.</p>
 <p>For goals involving obtaining an item or number of items, you do not need to keep the item(s) after the goal is complete.</p>
-<p>The board is still in early phases of testing. There may still be balance issues, and not all boards can be fully cleared.</p>
-<p>Send questions, concerns, and ideas for new goals to RattataJack on Discord.</p>
-<p></p>
+<p>Hovering over a goal may provide additional information.</p>
+<p>The board is still a work in progress.  Feel free to send questions, concerns, and suggestions to RattataJack on Discord.</p>
+<p>Check out the goal list <a href="https://github.com/rattatajack/cadenceBingo/blob/master/goals.js">here</a>.</p>
 </div>
 </div>
 

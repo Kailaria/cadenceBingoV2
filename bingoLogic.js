@@ -20,16 +20,19 @@ bingo.bingo = function (goals) {
   var allowSimilar = gup('allowSimilar');
   var useDifficultyPattern = gup('randomDifficultyPattern');
   var showDifficulty = gup('showDifficulty');
+  var hideBoard = gup('hide');
 
   var shouldAllowSimilar = allowSimilar.toLowerCase() == "true";
   var shouldRandomDifficultyPattern = useDifficultyPattern.toLowerCase() == "true";
   var shouldShowDifficulty = showDifficulty.toLowerCase() == "true";
+  var shouldHideBoard = hideBoard.toLowerCase() == "true";
 
   var generateLink = document.getElementById("generateLink");
   var similarityCheckbox = document.getElementById('allowSimilar');
   var seedInput = document.getElementById('seed');
-  document.getElementById('currentSeed').innerText = "Current Seed: " + seed;
+  document.getElementById('currentSeed').innerText = seed;
   var difficultyPatternCheckbox = document.getElementById('randomDifficultyPattern');
+  var hideCheckbox = document.getElementById('hideBoard');
   var tipText = document.getElementById("tipText");
 
   if (seed == "" ) {
@@ -52,6 +55,8 @@ bingo.bingo = function (goals) {
       link += '&randomDifficultyPattern=true';
     if(difficultyCheckbox.checked == true)
       link += '&showDifficulty=true';
+    if(hideCheckbox.checked == true)
+      link += '&hide=true';
 	if(seedInput.value != "")
 	  link += '&seed=' + seedInput.value;
     generateLink.href = link;
@@ -69,11 +74,11 @@ bingo.bingo = function (goals) {
   this.challengePositions = [12];
   this.finalPosition = [0];
 
+  readGoals("final", finalGoals);
+  readGoals("challenge", challengeGoals);
   readGoals("hard", hardGoals);
   readGoals("medium", mediumGoals);
   readGoals("easy", easyGoals);
-  readGoals("challenge", challengeGoals);
-  readGoals("final", finalGoals);
 
   if(!shouldAllowSimilar) {
     //compute the exclusions of the goals
@@ -93,17 +98,18 @@ bingo.bingo = function (goals) {
   addGoals(finalGoal, goals["final"], this.finalPosition, invalidNames);
 
   if(shouldRandomDifficultyPattern) {
-    allGoals = goals["hard"].concat(goals["medium"], goals["easy"],goals["challenge"]);
-    allPositions = this.hardPositions.concat(this.mediumPositions, this.easyPositions, this.challengePositions);
+    allGoals = goals["challenge"].concat(goals["hard"],goals["medium"], goals["easy"]);
+    allPositions = this.challengePositions.concat(this.mediumPositions, this.easyPositions, this.hardPositions);
     addGoals(bingoBoard, allGoals, allPositions, invalidNames);
   } else {
+    addGoals(bingoBoard, goals["challenge"], this.challengePositions, invalidNames);
     addGoals(bingoBoard, goals["hard"], this.hardPositions, invalidNames);
     addGoals(bingoBoard, goals["medium"], this.mediumPositions, invalidNames);
     addGoals(bingoBoard, goals["easy"], this.easyPositions, invalidNames);
-    addGoals(bingoBoard, goals["challenge"], this.challengePositions, invalidNames);
   }
   
   document.getElementById('finalGoal').innerText = finalGoal[0].label;
+  document.getElementById('finalDescription').innerText = finalGoal[0].tip;
   
 
   //populate the actual table on the page
@@ -127,6 +133,12 @@ bingo.bingo = function (goals) {
   if(shouldShowDifficulty) {
     difficultyCheckbox.checked = true;
     this.addAllDifficultyClasses();
+  }
+  
+  if(shouldHideBoard) {
+    hideCheckbox.checked = true;
+	document.getElementById("preboard").style.display = "block";
+	document.getElementById("board").style.display = "none";
   }
 
 
@@ -253,4 +265,9 @@ bingo.addDifficultyClasses = function (className, positions) {
     var pos = positions[i];
     $('#slot'+pos).addClass(className);
   }
+}
+
+function revealBoard() {
+	document.getElementById("preboard").style.display = "none";
+	document.getElementById("board").style.display = "block";
 }

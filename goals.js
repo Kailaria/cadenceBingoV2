@@ -53,10 +53,7 @@ mediumGoals = [
 "Hold 10 Diamonds|10diamonds",
 "Hold 15 Diamonds|15diamonds",
 "Infuse Weapon|infuse",
-//"Timed Blue Chest|timedBlue",
-//"Flawless Purple Chest|flawlessPurple",
 "Defeat 2 Dark Stairs Minibosses|2darkStairs",
-"Defeat 3 Dark Stairs Minibosses|3darkStairs", //still unsure if this is always possible
 "Open 2 Puzzle Cave Purple Chests|2puzzleCaves|Puzzle caves are the ones with round entrances.  One always appears by Zelda's tower, and one always appears by Link's house.",
 "Unlock Link/Zelda|wakeLink",
 "Unlock Cadence|cadence",

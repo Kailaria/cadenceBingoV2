@@ -48,10 +48,18 @@
   margin: 0px auto;
 }
 
+#preboard {
+	border-radius: 15px;
+	background:#F3F3F0;
+	padding: 10px;
+	display: none;
+}
+
 #board {
   border-radius: 15px;
   background:#F3F3F0;
   padding: 10px;
+  display: block;
 }
 
 #explanation {
