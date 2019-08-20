@@ -49,9 +49,6 @@
 }
 
 #preboard {
-	border-radius: 15px;
-	background:#F3F3F0;
-	padding: 10px;
 	display: none;
 }
 
@@ -59,6 +56,15 @@
   border-radius: 15px;
   background:#F3F3F0;
   padding: 10px;
+  display: block;
+}
+
+#details {
+  border-radius: 15px;
+  background:#F3F3F0;
+  padding: 10px;
+  border: 3px;
+  margin: 15px;
   display: block;
 }
 

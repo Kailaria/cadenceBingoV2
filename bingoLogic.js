@@ -1,5 +1,77 @@
-$(function() { bingo.bingo(goals); });
+$(function() { init(); });
 
+
+//init code is very trashy.  should revisit sometime.
+init = function () {
+	var hideBoard = gup('hide');
+  var newSeed = gup('newseed');
+	
+	
+  var difficultyCheckbox = document.getElementById('showDifficulty');
+	
+  var seed = gup('seed');
+  var allowSimilar = gup('allowSimilar');
+  var useDifficultyPattern = gup('randomDifficultyPattern');
+  var showDifficulty = gup('showDifficulty');
+  var hideBoard = gup('hide');
+
+  var shouldAllowSimilar = allowSimilar.toLowerCase() == "true";
+  var shouldRandomDifficultyPattern = useDifficultyPattern.toLowerCase() == "true";
+  var shouldShowDifficulty = showDifficulty.toLowerCase() == "true";
+  var shouldHideBoard = hideBoard.toLowerCase() == "true";
+  
+  var similarityCheckbox = document.getElementById('allowSimilar');
+  var seedInput = document.getElementById('seed');
+  document.getElementById('currentSeed').innerText = seed;
+  var difficultyPatternCheckbox = document.getElementById('randomDifficultyPattern');
+  var hideCheckbox = document.getElementById('hideBoard');
+  
+  if (seed == "" ) {
+    var symbol;
+    if(window.location.href.indexOf('?') == -1) {
+      symbol = '?';
+    } else {
+      symbol = '&';
+    }
+
+    window.location += symbol + 'seed=' + Math.ceil(1000*1000*1000 * Math.random()).toString(36);
+    return;
+  }
+  
+  //check the boxes based on url params
+  if (shouldAllowSimilar) {
+    similarityCheckbox.checked = true;
+  }
+
+  if(shouldRandomDifficultyPattern) {
+    difficultyPatternCheckbox.checked = true;
+  }
+  
+  if(shouldShowDifficulty) {
+    difficultyCheckbox.checked = true;
+  }
+  
+  if(shouldHideBoard) {
+    hideCheckbox.checked = true;
+	document.getElementById("preboard").style.display = "block";
+	document.getElementById("toWin").style.display = "none";
+  }
+  else {
+	  bingo.bingo(goals);
+  }
+  
+  
+  function gup( name ) {
+    name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+    var regexS = "[\\?&]"+name+"=([^&#]*)";
+    var regex = new RegExp( regexS );
+    var results = regex.exec( window.location.href );
+    if( results == null )
+      return "";
+    else
+      return results[1];
+  }
+}
 
 
 goals = [];
@@ -27,25 +99,15 @@ bingo.bingo = function (goals) {
   var shouldShowDifficulty = showDifficulty.toLowerCase() == "true";
   var shouldHideBoard = hideBoard.toLowerCase() == "true";
 
-  var generateLink = document.getElementById("generateLink");
-  var similarityCheckbox = document.getElementById('allowSimilar');
+	var similarityCheckbox = document.getElementById('allowSimilar');
   var seedInput = document.getElementById('seed');
-  document.getElementById('currentSeed').innerText = seed;
   var difficultyPatternCheckbox = document.getElementById('randomDifficultyPattern');
   var hideCheckbox = document.getElementById('hideBoard');
+
+  var generateLink = document.getElementById("generateLink");
   var tipText = document.getElementById("tipText");
 
-  if (seed == "" ) {
-    var symbol;
-    if(window.location.href.indexOf('?') == -1) {
-      symbol = '?';
-    } else {
-      symbol = '&';
-    }
-
-    window.location += symbol + 'seed=' + Math.ceil(1000*1000*1000 * Math.random()).toString(36);
-    return;
-  }
+  
 
   $('#generateLink').click(function(){
     var link = "?";
@@ -121,25 +183,10 @@ bingo.bingo = function (goals) {
 	});
   }
   
-  //check the boxes based on url params
-  if (shouldAllowSimilar) {
-    similarityCheckbox.checked = true;
-  }
-
-  if(shouldRandomDifficultyPattern) {
-    difficultyPatternCheckbox.checked = true;
-  }
-  
   if(shouldShowDifficulty) {
-    difficultyCheckbox.checked = true;
     this.addAllDifficultyClasses();
   }
   
-  if(shouldHideBoard) {
-    hideCheckbox.checked = true;
-	document.getElementById("preboard").style.display = "block";
-	document.getElementById("board").style.display = "none";
-  }
 
 
 
@@ -256,7 +303,7 @@ bingo.addAllDifficultyClasses = function () {
   
 bingo.removeAllDifficultyClasses = function () {
   for(var i = 0; i < 25; ++i) {
-    $('#slot'+i).removeClass("hard medium easy");
+    $('#slot'+i).removeClass("hard medium easy challenge");
   }
 }
 
@@ -269,5 +316,6 @@ bingo.addDifficultyClasses = function (className, positions) {
 
 function revealBoard() {
 	document.getElementById("preboard").style.display = "none";
-	document.getElementById("board").style.display = "block";
+	document.getElementById("toWin").style.display = "block";
+	bingo.bingo(goals);
 }
