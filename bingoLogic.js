@@ -327,7 +327,6 @@ bingo.exportBoard = function() {
 		boardString += ',{"name": "' + goal + '"}';
 	}
 	boardString += "]";
-	boardString += "]";
 	alert(boardString);
 }
 
