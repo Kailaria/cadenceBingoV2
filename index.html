@@ -24,9 +24,10 @@
 
 <div id="stuff">
 <div id="board">
-<button id="preboard" onclick="revealBoard()">Reveal the Board</button>
+<div id="header">
+<button id="preboard" onclick="bingo.revealBoard()">Reveal the Board</button>
 <p id="toWin">To win, get three full lines and <b id="finalGoal"></b></p>
-<p id="finalDescription"></p>
+</div>
 <table id="bingo" cellspacing="4" cellpadding="7"><tr>
 <td id="slot0"></td>
 <td id="slot1"></td>
@@ -61,6 +62,7 @@
 <div id="tip"><p id="tipText"></p></div>
 <p>Seed: <b id="currentSeed"></b></p>
 <p><label><input type="checkbox" id="showDifficulty">Show difficulty</input></label></p>
+<button id="exportBoard" onclick="bingo.exportBoard()">Export Board for BingoSync</button>
 </div>
 
 <div id="generation">

@@ -170,11 +170,10 @@ bingo.bingo = function (goals) {
     addGoals(bingoBoard, goals["easy"], this.easyPositions, invalidNames);
   }
   
-  document.getElementById('finalGoal').innerText = finalGoal[0].label;
-  document.getElementById('finalDescription').innerText = finalGoal[0].tip;
-  
-
   //populate the actual table on the page
+  
+  document.getElementById('finalGoal').innerText = finalGoal[0].label;
+  
   for (var i=0; i<25; i++) {
     $('#slot'+i).append(bingoBoard[i].label);
 	$('#slot'+i)[0].setAttribute("title", bingoBoard[i].tip);
@@ -182,6 +181,11 @@ bingo.bingo = function (goals) {
 	  tipText.innerHTML=this.title;
 	});
   }
+  
+	$('#header').attr("title", finalGoal[0].tip);
+  $('#header').mouseover(function() {
+	  tipText.innerHTML=this.title;
+	});
   
   if(shouldShowDifficulty) {
     this.addAllDifficultyClasses();
@@ -314,7 +318,20 @@ bingo.addDifficultyClasses = function (className, positions) {
   }
 }
 
-function revealBoard() {
+bingo.exportBoard = function() {
+	var boardString = "[";
+	
+	boardString += '{"name": "' + $('#slot0').text() + '"}';
+	for (var i=1; i<25; i++) {
+		var goal = $('#slot'+i).text();
+		boardString += ',{"name": "' + goal + '"}';
+	}
+	boardString += "]";
+	boardString += "]";
+	alert(boardString);
+}
+
+bingo.revealBoard = function() {
 	document.getElementById("preboard").style.display = "none";
 	document.getElementById("toWin").style.display = "block";
 	bingo.bingo(goals);
