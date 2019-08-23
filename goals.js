@@ -45,7 +45,7 @@ mediumGoals = [
 "Explore Every Mountain Tile|exploreMountains",
 "Open 2 Fairy Fountains|2fountains",
 "Get Stamina Increase|staminaUp",
-"4 Gears|4gears",
+//"4 Gears|4gears",
 "4 Special Daggers / Shortswords|4daggers",
 "I AM ERROR|iAmError",
 "Hold 250 Rupees|250rupees",
