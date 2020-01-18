@@ -107,7 +107,9 @@ bingo.bingo = function (goals) {
   var generateLink = document.getElementById("generateLink");
   var tipText = document.getElementById("tipText");
 
-  
+  var magicSquareVersion = "BoI";
+  var gameVersion = "v1_0_2";
+  var goalsDictionaryKey = magicSquareVersion + gameVersion;
 
   $('#generateLink').click(function(){
     var link = "?";
@@ -136,11 +138,11 @@ bingo.bingo = function (goals) {
   this.challengePositions = [12];
   this.finalPosition = [0];
 
-  readGoals("final", finalGoals);
-  readGoals("challenge", challengeGoals);
-  readGoals("hard", hardGoals);
-  readGoals("medium", mediumGoals);
-  readGoals("easy", easyGoals);
+  readGoals("final", goalsDictionary[goalsDictionaryKey].finalGoals);
+  readGoals("challenge", goalsDictionary[goalsDictionaryKey].challengeGoals);
+  readGoals("hard", goalsDictionary[goalsDictionaryKey].hardGoals);
+  readGoals("medium", goalsDictionary[goalsDictionaryKey].mediumGoals);
+  readGoals("easy", goalsDictionary[goalsDictionaryKey].easyGoals);
 
   if(!shouldAllowSimilar) {
     //compute the exclusions of the goals
