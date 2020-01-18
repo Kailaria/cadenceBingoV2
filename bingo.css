@@ -34,6 +34,7 @@
 #bingo tr td.hard { background:#FFE9E9; }
 #bingo tr td.medium { background:#FFFFE9; }
 #bingo tr td.easy { background:#F2F2FF; }
+#bingo tr td.challenge { background:#FFE9FF; }
 
 #bingo tr td.greensquare { background:#75E075; }
 #bingo tr td.redsquare { background:#E08566; }
@@ -47,11 +48,24 @@
   margin: 0px auto;
 }
 
+#preboard {
+	display: none;
+}
+
 #board {
   border-radius: 15px;
   background:#F3F3F0;
   padding: 10px;
-  height: 850px;
+  display: block;
+}
+
+#details {
+  border-radius: 15px;
+  background:#F3F3F0;
+  padding: 10px;
+  border: 3px;
+  margin: 15px;
+  display: block;
 }
 
 #explanation {

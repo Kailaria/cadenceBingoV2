@@ -1,5 +1,77 @@
-$(function() { bingo.bingo(goals); });
+$(function() { init(); });
 
+
+//init code is very trashy.  should revisit sometime.
+init = function () {
+	var hideBoard = gup('hide');
+  var newSeed = gup('newseed');
+	
+	
+  var difficultyCheckbox = document.getElementById('showDifficulty');
+	
+  var seed = gup('seed');
+  var allowSimilar = gup('allowSimilar');
+  var useDifficultyPattern = gup('randomDifficultyPattern');
+  var showDifficulty = gup('showDifficulty');
+  var hideBoard = gup('hide');
+
+  var shouldAllowSimilar = allowSimilar.toLowerCase() == "true";
+  var shouldRandomDifficultyPattern = useDifficultyPattern.toLowerCase() == "true";
+  var shouldShowDifficulty = showDifficulty.toLowerCase() == "true";
+  var shouldHideBoard = hideBoard.toLowerCase() == "true";
+  
+  var similarityCheckbox = document.getElementById('allowSimilar');
+  var seedInput = document.getElementById('seed');
+  document.getElementById('currentSeed').innerText = seed;
+  var difficultyPatternCheckbox = document.getElementById('randomDifficultyPattern');
+  var hideCheckbox = document.getElementById('hideBoard');
+  
+  if (seed == "" ) {
+    var symbol;
+    if(window.location.href.indexOf('?') == -1) {
+      symbol = '?';
+    } else {
+      symbol = '&';
+    }
+
+    window.location += symbol + 'seed=' + Math.ceil(1000*1000*1000 * Math.random()).toString(36);
+    return;
+  }
+  
+  //check the boxes based on url params
+  if (shouldAllowSimilar) {
+    similarityCheckbox.checked = true;
+  }
+
+  if(shouldRandomDifficultyPattern) {
+    difficultyPatternCheckbox.checked = true;
+  }
+  
+  if(shouldShowDifficulty) {
+    difficultyCheckbox.checked = true;
+  }
+  
+  if(shouldHideBoard) {
+    hideCheckbox.checked = true;
+	document.getElementById("preboard").style.display = "block";
+	document.getElementById("toWin").style.display = "none";
+  }
+  else {
+	  bingo.bingo(goals);
+  }
+  
+  
+  function gup( name ) {
+    name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+    var regexS = "[\\?&]"+name+"=([^&#]*)";
+    var regex = new RegExp( regexS );
+    var results = regex.exec( window.location.href );
+    if( results == null )
+      return "";
+    else
+      return results[1];
+  }
+}
 
 
 goals = [];
@@ -20,27 +92,24 @@ bingo.bingo = function (goals) {
   var allowSimilar = gup('allowSimilar');
   var useDifficultyPattern = gup('randomDifficultyPattern');
   var showDifficulty = gup('showDifficulty');
+  var hideBoard = gup('hide');
 
   var shouldAllowSimilar = allowSimilar.toLowerCase() == "true";
   var shouldRandomDifficultyPattern = useDifficultyPattern.toLowerCase() == "true";
   var shouldShowDifficulty = showDifficulty.toLowerCase() == "true";
+  var shouldHideBoard = hideBoard.toLowerCase() == "true";
+
+	var similarityCheckbox = document.getElementById('allowSimilar');
+  var seedInput = document.getElementById('seed');
+  var difficultyPatternCheckbox = document.getElementById('randomDifficultyPattern');
+  var hideCheckbox = document.getElementById('hideBoard');
 
   var generateLink = document.getElementById("generateLink");
-  var similarityCheckbox = document.getElementById('allowSimilar');
-  var difficultyPatternCheckbox = document.getElementById('randomDifficultyPattern');
   var tipText = document.getElementById("tipText");
 
-  if (seed == "" ) {
-    var symbol;
-    if(window.location.href.indexOf('?') == -1) {
-      symbol = '?';
-    } else {
-      symbol = '&';
-    }
-
-    window.location += symbol + 'seed=' + Math.ceil(1000*1000*1000 * Math.random()).toString(36);
-    return;
-  }
+  var goalsVersion = document.getElementById("goalsVersion").value;
+  // var magicSquareVersion = "BoI";
+  // var gameVersion = "v1_0_2";
 
   $('#generateLink').click(function(){
     var link = "?";
@@ -50,6 +119,11 @@ bingo.bingo = function (goals) {
       link += '&randomDifficultyPattern=true';
     if(difficultyCheckbox.checked == true)
       link += '&showDifficulty=true';
+    if(hideCheckbox.checked == true)
+      link += '&hide=true';
+    if(seedInput.value != "")
+      link += '&seed=' + seedInput.value;
+    link += '&goalsVersion=' + goalsVersion;
     generateLink.href = link;
   });
 
@@ -60,34 +134,49 @@ bingo.bingo = function (goals) {
   results.append ("<p></p>");
 
   this.hardPositions = [2,9,11,18,20];
-  this.mediumPositions = [0,3,5,7,12,14,16,19,21,23];
-  this.easyPositions = [1,4,6,8,10,13,15,17,22,24];
+  this.mediumPositions = [1,4,6,8,10,13,15,17,22,24];
+  this.easyPositions = [0,3,5,7,14,16,19,21,23];
+  this.challengePositions = [12];
+  this.finalPosition = [0];
 
-  readGoals("hard", hardGoals);
-  readGoals("medium", mediumGoals);
-  readGoals("easy", easyGoals);
+  readGoals("final", goalsDictionary[goalsVersion].finalGoals);
+  readGoals("challenge", goalsDictionary[goalsVersion].challengeGoals);
+  readGoals("hard", goalsDictionary[goalsVersion].hardGoals);
+  readGoals("medium", goalsDictionary[goalsVersion].mediumGoals);
+  readGoals("easy", goalsDictionary[goalsVersion].easyGoals);
 
   if(!shouldAllowSimilar) {
     //compute the exclusions of the goals
-    makeExclusions(goals["hard"]);
-    makeExclusions(goals["medium"]);
-    makeExclusions(goals["easy"]);
+    makeExclusions(goals["final"], goalsVersion);
+    makeExclusions(goals["challenge"], goalsVersion);
+    makeExclusions(goals["hard"], goalsVersion);
+    makeExclusions(goals["medium"], goalsVersion);
+    makeExclusions(goals["easy"], goalsVersion);
   }
 
   bingoBoard = [];
+  finalGoal = [];
   var invalidNames = [];
 
+
+  //create win condition
+  addGoals(finalGoal, goals["final"], this.finalPosition, invalidNames);
+
   if(shouldRandomDifficultyPattern) {
-    allGoals = goals["hard"].concat(goals["medium"], goals["easy"]);
-    allPositions = this.hardPositions.concat(this.mediumPositions, this.easyPositions);
+    allGoals = goals["challenge"].concat(goals["hard"],goals["medium"], goals["easy"]);
+    allPositions = this.challengePositions.concat(this.mediumPositions, this.easyPositions, this.hardPositions);
     addGoals(bingoBoard, allGoals, allPositions, invalidNames);
   } else {
+    addGoals(bingoBoard, goals["challenge"], this.challengePositions, invalidNames);
     addGoals(bingoBoard, goals["hard"], this.hardPositions, invalidNames);
     addGoals(bingoBoard, goals["medium"], this.mediumPositions, invalidNames);
     addGoals(bingoBoard, goals["easy"], this.easyPositions, invalidNames);
   }
-
+  
   //populate the actual table on the page
+  
+  document.getElementById('finalGoal').innerText = finalGoal[0].label;
+  
   for (var i=0; i<25; i++) {
     $('#slot'+i).append(bingoBoard[i].label);
 	$('#slot'+i)[0].setAttribute("title", bingoBoard[i].tip);
@@ -96,19 +185,15 @@ bingo.bingo = function (goals) {
 	});
   }
   
-  //check the boxes based on url params
-  if (shouldAllowSimilar) {
-    similarityCheckbox.checked = true;
-  }
-
-  if(shouldRandomDifficultyPattern) {
-    difficultyPatternCheckbox.checked = true;
-  }
+	$('#header').attr("title", finalGoal[0].tip);
+  $('#header').mouseover(function() {
+	  tipText.innerHTML=this.title;
+	});
   
   if(shouldShowDifficulty) {
-    difficultyCheckbox.checked = true;
     this.addAllDifficultyClasses();
   }
+  
 
 
 
@@ -144,9 +229,9 @@ bingo.bingo = function (goals) {
     return candidates;
   }
 
-  function makeExclusions(goals) {
-    for(var i = 0; i < exclusions.length; ++i) {
-      excl = exclusions[i];
+  function makeExclusions(goals, goalsVersion) {
+    for(var i = 0; i < goalsDictionary[goalsVersion].exclusions.length; ++i) {
+      excl = goalsDictionary[goalsVersion].exclusions[i];
       for(var j = 0; j < goals.length; ++j) {
         goal = goals[j];
         //if the goal is mentioned by the exclusion list
@@ -225,7 +310,7 @@ bingo.addAllDifficultyClasses = function () {
   
 bingo.removeAllDifficultyClasses = function () {
   for(var i = 0; i < 25; ++i) {
-    $('#slot'+i).removeClass("hard medium easy");
+    $('#slot'+i).removeClass("hard medium easy challenge");
   }
 }
 
@@ -234,4 +319,22 @@ bingo.addDifficultyClasses = function (className, positions) {
     var pos = positions[i];
     $('#slot'+pos).addClass(className);
   }
+}
+
+bingo.exportBoard = function() {
+	var boardString = "[";
+	
+	boardString += '{"name": "' + $('#slot0').text() + '"}';
+	for (var i=1; i<25; i++) {
+		var goal = $('#slot'+i).text();
+		boardString += ',{"name": "' + goal + '"}';
+	}
+	boardString += "]";
+	alert(boardString);
+}
+
+bingo.revealBoard = function() {
+	document.getElementById("preboard").style.display = "none";
+	document.getElementById("toWin").style.display = "block";
+	bingo.bingo(goals);
 }

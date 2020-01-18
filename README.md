@@ -1,7 +1,7 @@
-isaacBingo
+Cadence of Hyrule Bingo
 ==========
 
-The Binding of Isaac Bingo Generator
+Cadence of Hyrule Bingo Generator
 
-Everything is hosted in the gh-pages branch.
-http://hyphen-ated.github.io/isaacBingo/
+
+See the Bingo Generator in action [here](https://kailaria.github.io/cadenceBingoV2/?)!
