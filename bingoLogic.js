@@ -148,7 +148,7 @@ bingo.bingo = function (goals) {
   if(!shouldAllowSimilar) {
     //compute the exclusions of the goals
     makeExclusions(goals["final"], goalsVersion);
-    makeExclusions(goals["challenge"]), goalsVersion;
+    makeExclusions(goals["challenge"], goalsVersion);
     makeExclusions(goals["hard"], goalsVersion);
     makeExclusions(goals["medium"], goalsVersion);
     makeExclusions(goals["easy"], goalsVersion);
