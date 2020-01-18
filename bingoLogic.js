@@ -107,9 +107,9 @@ bingo.bingo = function (goals) {
   var generateLink = document.getElementById("generateLink");
   var tipText = document.getElementById("tipText");
 
-  var magicSquareVersion = "BoI";
-  var gameVersion = "v1_0_2";
-  var goalsDictionaryKey = magicSquareVersion + gameVersion;
+  var goalsVersion = document.getElementById("goalsVersion");
+  // var magicSquareVersion = "BoI";
+  // var gameVersion = "v1_0_2";
 
   $('#generateLink').click(function(){
     var link = "?";
@@ -121,8 +121,9 @@ bingo.bingo = function (goals) {
       link += '&showDifficulty=true';
     if(hideCheckbox.checked == true)
       link += '&hide=true';
-	if(seedInput.value != "")
-	  link += '&seed=' + seedInput.value;
+    if(seedInput.value != "")
+      link += '&seed=' + seedInput.value;
+    link += '&goalsVersion=' + goalsVersion;
     generateLink.href = link;
   });
 
@@ -138,11 +139,11 @@ bingo.bingo = function (goals) {
   this.challengePositions = [12];
   this.finalPosition = [0];
 
-  readGoals("final", goalsDictionary[goalsDictionaryKey].finalGoals);
-  readGoals("challenge", goalsDictionary[goalsDictionaryKey].challengeGoals);
-  readGoals("hard", goalsDictionary[goalsDictionaryKey].hardGoals);
-  readGoals("medium", goalsDictionary[goalsDictionaryKey].mediumGoals);
-  readGoals("easy", goalsDictionary[goalsDictionaryKey].easyGoals);
+  readGoals("final", goalsDictionary[goalsVersion].finalGoals);
+  readGoals("challenge", goalsDictionary[goalsVersion].challengeGoals);
+  readGoals("hard", goalsDictionary[goalsVersion].hardGoals);
+  readGoals("medium", goalsDictionary[goalsVersion].mediumGoals);
+  readGoals("easy", goalsDictionary[goalsVersion].easyGoals);
 
   if(!shouldAllowSimilar) {
     //compute the exclusions of the goals
