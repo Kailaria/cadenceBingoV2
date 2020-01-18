@@ -107,7 +107,7 @@ bingo.bingo = function (goals) {
   var generateLink = document.getElementById("generateLink");
   var tipText = document.getElementById("tipText");
 
-  var goalsVersion = document.getElementById("goalsVersion");
+  var goalsVersion = document.getElementById("goalsVersion").value;
   // var magicSquareVersion = "BoI";
   // var gameVersion = "v1_0_2";
 
@@ -147,11 +147,11 @@ bingo.bingo = function (goals) {
 
   if(!shouldAllowSimilar) {
     //compute the exclusions of the goals
-    makeExclusions(goals["final"]);
-    makeExclusions(goals["challenge"]);
-    makeExclusions(goals["hard"]);
-    makeExclusions(goals["medium"]);
-    makeExclusions(goals["easy"]);
+    makeExclusions(goals["final"], goalsVersion);
+    makeExclusions(goals["challenge"]), goalsVersion;
+    makeExclusions(goals["hard"], goalsVersion);
+    makeExclusions(goals["medium"], goalsVersion);
+    makeExclusions(goals["easy"], goalsVersion);
   }
 
   bingoBoard = [];
@@ -229,9 +229,9 @@ bingo.bingo = function (goals) {
     return candidates;
   }
 
-  function makeExclusions(goals) {
-    for(var i = 0; i < exclusions.length; ++i) {
-      excl = exclusions[i];
+  function makeExclusions(goals, goalsVersion) {
+    for(var i = 0; i < goalsDictionary[goalsVersion].exclusions.length; ++i) {
+      excl = goalsDictionary[goalsVersion].exclusions[i];
       for(var j = 0; j < goals.length; ++j) {
         goal = goals[j];
         //if the goal is mentioned by the exclusion list
