@@ -24,6 +24,15 @@ goalsDictionary["BoIv1_1_1"] = {
             "Kill Keymos|keymos",
             "Goron Charm|goronCharm",
             "Infuse Weapon|infuse",
+            // New for bingo v1.1.0
+            "Extend both bridges|extendBridges|You will need 3 gears and to talk to the Gerudo inside the ruins, as well as extend the bridge in Death Mountain.",
+            "Get a dungeon map or compass in each instrument dungeon|dungeonMapping|You only need one or the other in each dungeon: Frozen Grotto, Gerudo Ruins, Temple of Storms, and Lost Swamp.",
+            "Get both mapping items in Frozen Grotto|grottoFullMapping|Compass & Map",
+            "Get both mapping items in Gerudo Ruins|ruinsFullMapping|Compass & Map",
+            "Get both mapping items in Temple of Storms|stormsFullMapping|Compass & Map",
+            "Get both mapping items in Lost Swamp|swampFullMapping|Compass & Map",
+            "Buy Dungeon Freddie's Heart (Container)|freddieHeart|Buy all four Heart Pieces in Freddie's shops in the instrument dungeons. There's always one in each instrument dungeon's 1F.",
+            "All Heart Pieces just outside instrument dungeons|dungeonOWHeartPieces|Collect all 3 heart pieces in the 3 large-area Overworld portions outside of instrument dungeons: Gerudo Desert (outside Gerudo Ruins), Lake Hylia (outside Frozen Grotto), and Death Mountain (outside Temple of Storms).",
         ],
 
     mediumGoals: 
@@ -50,7 +59,7 @@ goalsDictionary["BoIv1_1_1"] = {
             "Explore Every Desert Tile|exploreDesert",
             "Explore Every Swamp Tile|exploreSwamp",
             "Explore Every Mountain Tile|exploreMountains",
-            "Open 2 Fairy Fountains|2fountains",
+            "Open 2 Great Fairy Fountains|2fountains",
             "Get Stamina Increase|staminaUp",
             "4 Gears|4gears",
             "4 Special Daggers / Shortswords|4daggers",
@@ -68,25 +77,33 @@ goalsDictionary["BoIv1_1_1"] = {
             "Anti-Fairy in a Bottle|antifairyBottle",
             "Fish in a Bottle|fishBottle",
             "Clear the Hover Shrine|hoverShrine|You do not need to open the chest once you clear the screen.",
+            // Downgraded from Hard in v1.1.0
+            "Defeat Wizroboe|oboe",
             "Defeat Wizroboe as Link|oboeLink",
+            "Defeat Bass Guitarmos Knights|bass",
             "Defeat Bass Guitarmos Knights as Link|bassLink",
+            "Defeat Gohmaracas|maracas",
             "Defeat Gohmaracas as Link|maracasLink",
+            "Defeat Gleeokenspiel|glockenspiel",
+            "Defeat Gleeokenspiel as Link|glockenspielLink",
+            // New for bingo v1.1.0
+            "Fight two key arenas|keyArenas2|You do not need to grab the keys if you don't want to.",
+            "Purple chest on the gauntlet tile|gauntletPurple|Open the purple chest on the two-tile wide Gauntlet Overworld tile. This usually involves a puzzle of sorts to reach. The particular screen is NOT the Hyrule Castle Bridge tile.",
+            "Clear both Hyrule Bridge caves|bridgeCaves|The map must show an 'X' on both staircase icons of Hyrule Brdige's map tiles.",
+            "Clear all 3 Death Mountain caves|deathMountainCaves|The map must show an 'X' on all 3 staircase icons of Death Mountain's map tiles (the one beneath ToS, and the two in the center tiles of DM above Windmill Hut.",
+            "Ask for directions 2 times|fortunes2|Pay to have your fortune told twice (this means you will need to clear the first-indicated dungeon before you can get a new fortune for the second).",
+            "Play Fetch with the dog|dogFetch|Use Ice Rod OR Fire Rod OR Can of Somaria OR (Magic) Boomerang while facing the dog in Kakariko (this is not an in-game-recognized interaction, just arbitrary funsies).",
         ],
 
     hardGoals: 
         [
-            "Defeat Wizroboe|oboe",
             "Defeat Wizroboe as Cadence|oboeCadence",
-            "Defeat Wizroboe without using explosives|oboeNoBombs|Bombs, Bombchus, Din's Fire, and Bomb Fairies are all banned.",
-            "Defeat Gleeokenspiel|glockenspiel",
-            "Defeat Gleeokenspiel as Link|glockenspielLink",
+            // "Defeat Wizroboe without using explosives|oboeNoBombs|Bombs, Bombchus, Din's Fire, and Bomb Fairies are all banned.",
             "Defeat Gleeokenspiel as Cadence|glockenspielCadence",
             "Defeat Gleeokenspiel without using explosives|glockenspielNoBombs|Bombs, Bombchus, Din's Fire, and Bomb Fairies are all banned.",
             "Defeat Gleeokenspiel after killing every Gleeokenspiel Head|glockenspielAllHeads",
-            "Defeat Bass Guitarmos Knights|bass",
             "Defeat Bass Guitarmos Knights as Cadence|bassCadence",
-            "Defeat Bass Guitarmos Knights using base dagger / shortsword|bassBase|Items and skills are allowed.",
-            "Defeat Gohmaracas|maracas",
+            // "Defeat Bass Guitarmos Knights using base dagger / shortsword|bassBase|Items and skills are allowed.",
             "Defeat Gohmaracas as Cadence|maracasCadence",
             "Defeat Gohmaracas using base dagger / shortsword|maracasBase|Items and skills are allowed.",
             "Defeat Gohmaracas after breaking every bush in the arena|maracasAllBushes",
@@ -99,6 +116,16 @@ goalsDictionary["BoIv1_1_1"] = {
             "Hold 1000 Rupees|1000rupees",
             "Royal Rapier|royalRapier",
             "Caladbolg|caladbolg",
+            // New for bingo v1.1.0
+            "Fight five key arenas|keyArenas5|You do not need to grab the keys if you don't want to.",
+            "Fight all 3 key arenas in Hyrule Castle|keyArenasHC|You do not need to grab the keys if you don't want to.",
+            "Defeat Wizroboe using ONLY non-explosive A/X/B/Y items|oboeAxbyOnly|Weapons, L/R abilities, bomb(chu)s, and bomb fairies are not allowed to hurt Wizroboe (equip a dagger to minimize accidental pokes; you may use forbidden weapons against wizrobes & snowflakes)",
+            "Defeat Wizroboe honorably|oboeHonor|Use ONLY a permanent (non-glass) weapon and your L/R abilities to kill Wizroboe.",
+            "Defeat Bass Guitarmos without using explosives|bassNoBombs|Bombs, Bombchus, Din's Fire, and Bomb Fairies are all banned.",
+            "Defeat Bass Guitarmos honorably|bassHonor|Use ONLY a permanent (non-glass) weapon and your L/R abilities to kill Bass Guitarmos.",
+            "Defeat Gohmaracas using ONLY non-explosive A/X/B/Y items|maracasAxbyOnly|Weapons, L/R abilities, bomb(chu)s, and bomb fairies are not allowed to hurt Gohmaracas (equip a dagger to minimize accidental pokes; you may use forbidden weapons against small gohmas)",
+            "Defeat Gohmaracas honorably|maracasHonor|Use ONLY a permanent (non-glass) weapon and your L/R abilities to kill Gohmaracas.",
+            "Defeat Gleeokenspiel honorably|glockenspielHonor|Use ONLY a permanent (non-glass) weapon and your L/R abilities to kill Gleeokenspiel.",
         ],
 
     challengeGoals: 
@@ -116,6 +143,8 @@ goalsDictionary["BoIv1_1_1"] = {
             "Don't get the Zora's Flippers|noFlippers",
             "Skip Nayru's Love in Hyrule Castle|skipNayru|You can still pick up the shield (which includes Nayru's Love) at Link's house.",
             "No Major Dungeon Skips|noMajorSkips|1F skips and boss key skips are banned. For each dungeon floor, you must enter through the entrance, kill the miniboss, and exit through the exit.  Gear skip is also banned.",
+            // New for bingo v1.1.0
+            "Don't scale the castle walls|noCastleWalls|Do not use wall adventure around Hyrule Castle. This does not forbid the HC infusion (swimming) or other forms of wall adventures, or starting as Zelda.",
         ],
 
 
@@ -163,13 +192,18 @@ goalsDictionary["BoIv1_1_1"] = {
             ["yves","allExplored","darkFreddie"],
             ["yves","allExplored","octavo","characterWeapons","eliShovel"],
             ["glockenspiel","glockenspielAllHeads","glockenspielLink","glockenspielCadence","glockenspielNoBombs"],
-            ["oboe","oboeLink","oboeCadence","oboeNoBombs"],
-            ["maracas","maracasLink","maracasCadence","maracasAllBushes","maracasBase"],
-            ["bass","bassLink","bassCadence","bassBase"],
+            ["oboe","oboeLink","oboeCadence","oboeNoBombs","oboeAxbyOnly"],
+            ["maracas","maracasLink","maracasCadence","maracasAllBushes","maracasBase","maracasAxbyOnly"],
+            ["bass","bassLink","bassCadence","bassBase","bassNoBombs"],
             ["allExplored","exploreBeach"],
             ["allExplored","exploreDesert"],
             ["allExplored","exploreSwamp"],
             ["allExplored","exploreMountains"],
-            ["allItems","noDungeonChests"]
+            ["allItems","noDungeonChests"],
+            ["extendBridges","3gears"],
+            ["dungeonMapping","grottoFullMapping"],
+            ["dungeonMapping","ruinsFullMapping"],
+            ["dungeonMapping","stormsFullMapping"],
+            ["dungeonMapping","swampFullMapping"],
         ]
 };
