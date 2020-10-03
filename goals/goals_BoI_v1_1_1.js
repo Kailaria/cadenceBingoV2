@@ -4,13 +4,13 @@ goalsDictionary["BoIv1_1_1"] = {
         [
             "Open 1 Potion Shop|1potion",
             "Have 8 Hearts|8hearts",
-            "Din's Fire|dinsFire",
+            "Din's Fire/Spin Attack|cadenceCave2",
             "Shield Technique|shieldTechnique",
             "Big Bomb Bag|bombBag",
             "Activate 10 Sheikah Stones|10stones",
             "Defeat Freddie|freddie",
             "Snorkel|snorkel",
-            "Touch the Bench|bench",
+            "Touch a Bench on a scenic setpiece|bench|Either the one on the grasslands temple or one of the three on the beach's amphitheater (with a glass spear on top), but not the one in front of the Manta shop (Rupee Bottle & Snorkel)", // Updated bingo v1.2.2 - 
             "Gerudo Village Puzzle|gerudoPuzzle",
             "Windmill Puzzle|windmillPuzzle",
             "Tingle Puzzle|tinglePuzzle",
@@ -18,9 +18,10 @@ goalsDictionary["BoIv1_1_1"] = {
             "3 Gears|3gears",
             "Wake the Zora Prince|zoraPrince",
             //we'll see if the next three are guaranteed again in 1.1.1
-            "Get Ring of Blasting from the mountain fountain|mountainFountain",
-            "Get Ring of Risk from the swamp fountain|swampFountain",
-            "Get Ring of Blasting from the desert generator|desertGenerator", 
+            // "Get Ring of Blasting from the mountain fountain|mountainFountain",
+            // "Get Ring of Risk from the swamp fountain|swampFountain",
+            // "Get Ring of Blasting from the desert generator|desertGenerator", 
+            "Collect a fountain Ring|fountainRing|A Ring of Risk from the Forest fountain or a Ring of Blasting from the Cliffs fountain",
             "Kill Keymos|keymos",
             "Goron Charm|goronCharm",
             "Infuse Weapon|infuse",
@@ -68,7 +69,7 @@ goalsDictionary["BoIv1_1_1"] = {
             "Hold 4 Keys|4keys",
             "Hold 10 Diamonds|10diamonds",
             "Hold 15 Diamonds|15diamonds",
-            "Defeat 2 Dark Stairs Minibosses|2darkStairs",
+            "Defeat 2 cave dungeon minibosses|2darkStairs|These are typically indicated by the staircases being dark, bleeding darkness to the tiles around it; inside looks similar to Kakariko Crypt, except linear in layout. WARNING: While at least 2 existing in a seed is highly likely, it's possible that there might be only 1.",
             "Open 2 Puzzle Cave Purple Chests|2puzzleCaves|Puzzle caves are the ones with round entrances.  One always appears by Zelda's tower, and one always appears by Link's house.",
             "Unlock Link/Zelda|wakeLink",
             "Unlock Cadence|cadence",
@@ -141,10 +142,11 @@ goalsDictionary["BoIv1_1_1"] = {
             "Don't kill any shopkeepers|saveFreddie",
             "Don't pick up any heart containers|noHeartContainers|Heart pieces are allowed.",
             "Don't get the Zora's Flippers|noFlippers",
-            // "Skip Nayru's Love in Hyrule Castle|skipNayru|You can still pick up the shield (which includes Nayru's Love) at Link's house.",
+            "Don't pick up an R-ability|noDefense|Don't pick up Nayru's Love OR Link's Shield",
             "No Major Dungeon Skips|noMajorSkips|1F skips and boss key skips are banned. For each dungeon floor, you must enter through the entrance, kill the miniboss, and exit through the exit.  Gear skip is also banned.",
             // New for bingo v1.1.0
             "Don't scale the castle walls|noCastleWalls|Do not use wall adventure around Hyrule Castle. This does not forbid the HC infusion (swimming) or other forms of wall adventures, or starting as Zelda.",
+            "Don't use glass|noGlass|This includes glass weapons, glass slippers, glass torch, AND glass ring",
         ],
 
 
@@ -190,6 +192,8 @@ goalsDictionary["BoIv1_1_1"] = {
             ["yves","allExplored","caladbolg"],
             ["yves","allExplored","royalRapier"],
             ["yves","allExplored","darkFreddie"],
+            ["yves","allExplored","keyArenas5"],
+            ["yves","allExplored","keyArenasHC"],
             ["yves","allExplored","octavo","characterWeapons","eliShovel"],
             ["glockenspiel","glockenspielAllHeads","glockenspielLink","glockenspielCadence","glockenspielNoBombs","glockenspielHonor"],
             ["oboe","oboeLink","oboeCadence","oboeNoBombs","oboeAxbyOnly","oboeHonor"],
@@ -205,5 +209,6 @@ goalsDictionary["BoIv1_1_1"] = {
             ["dungeonMapping","ruinsFullMapping"],
             ["dungeonMapping","stormsFullMapping"],
             ["dungeonMapping","swampFullMapping"],
+            ["keyArenas2", "keyArenasHC"],
         ]
 };
