@@ -17,6 +17,21 @@ It's recommended that you use Node Package Manager to install these modules usin
 ```
 npm install vue bootstrap bootstrap-vue
 ```
+## Bingo v1.1.1:
+Re-balanced the CoH v1.1.1 changes and modified/added some goals:
+
+* Modified goals:
+    * Easy:
+        * Din's Fire -> Clarified to just be Cadence Cave 2 ability
+        * Touch the Bench -> Clarified that any scenic bench will work, not just "the" bench since it might not spawn.
+        * Rings in the open -> combined into 1 goal and reduced back down to only the ones at fountains (the desert generator one requires no extra work to grab, even though it messes with some bomb jump skips).
+    * Medium:
+        * Clarified Dark Stairs minibosses
+    * Challenge:
+        * Re-enabled Skip Nayru's, changed it to Skip R-ability
+* New Goal:
+    * Challenge:
+        * Don't use glass (includes glass of any sort, including slippers, torch, shovel, AND ring of preservation)
 
 ## Bingo v1.1.0:
 Made multiple changes for CoH v1.1.1:
