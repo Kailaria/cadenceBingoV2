@@ -8,7 +8,24 @@
     </head>
     <body>
         <div id="app">
-            <h1>{{ message }}</h1>
+            <h1 :title="h1Title">{{ message }}</h1>
+            <p>{{ description }}</p>
+            <p v-if="pvalue > 10">Conditional if</p>
+            <p v-else-if="pvalue <= 10 && pvalue > 0">Conditional if-else</p>
+            <p v-else>Conditional else</p>
+            <div v-for="update in updateLog" :key="update.version">
+                <h2>{{ update.title }}</h2>
+                <h4>{{ update.date }}</h4>
+                <h5>{{ update.version }}</h5>
+                <p>{{ update.summary }}</p>
+                <div v-for="change in update.changeLog" :key="change.id">
+                    <button @click="toggleChangeDetails(update.version, change.id)">>></button>
+                    <span>{{ change.summary }}</span>
+                    <div v-if="change.isDisplayDetails">
+                        details for change with ID = {{ change.id }} displayed
+                    </div>
+                </div>
+            </div>
         </div>
         <script src="vueIndex.js" type="text/javascript"></script>
     </body>
