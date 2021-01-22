@@ -8,21 +8,38 @@
     </head>
     <body>
         <div id="app">
-            <h1 :title="h1Title">{{ message }}</h1>
-            <p>{{ description }}</p>
-            <p v-if="pvalue > 10">Conditional if</p>
-            <p v-else-if="pvalue <= 10 && pvalue > 0">Conditional if-else</p>
-            <p v-else>Conditional else</p>
-            <div v-for="update in updateLog" :key="update.version">
-                <h2>{{ update.title }}</h2>
-                <h4>{{ update.date }}</h4>
-                <h5>{{ update.version }}</h5>
-                <p>{{ update.summary }}</p>
-                <div v-for="change in update.changeLog" :key="change.id">
-                    <button @click="toggleChangeDetails(update.version, change.id)">>></button>
-                    <span>{{ change.summary }}</span>
-                    <div v-if="change.isDisplayDetails">
-                        details for change with ID = {{ change.id }} displayed
+            <h1 class="titleCard">
+                CoH Bingo image of some sort?
+            </h1>
+            <div class="" style="text-align: center; height: 50px; vertical-align: middle;">
+                This is where the easily accessible "generate a new card (with seed)"
+                button will go.
+            </div>
+            <div style="display: flex; flex-direction: row;">
+                <div style="flex:flex-shrink; width: 200px">
+                    This is where the index of updates will be listed and selectable.
+                </div>
+                <div style="flex:flex-grow;" v-for="update in updateLog" :key="update.version">
+                    <h2>{{ update.title }}</h2>
+                    <h4>{{ update.date }}</h4>
+                    <h5>{{ update.version }}</h5>
+                    <p>{{ update.summary }}</p>
+                    <div v-for="change in update.changeLog" :key="change.id">
+                        <button v-if="change.details !== '' && !change.isDisplayDetails" 
+                            @click="toggleChangeDetails(update.version, change.id)">
+                            >>
+                        </button>
+                        <button v-else-if="change.details !== '' && change.isDisplayDetails" 
+                            @click="toggleChangeDetails(update.version, change.id)">
+                            VV
+                        </button>
+                        <button v-else disabled="true">
+                            --
+                        </button>
+                        <span>{{ change.summary }}</span>
+                        <div v-if="change.isDisplayDetails">
+                            {{ change.details }}
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,10 +1,6 @@
 var app = new Vue({
     el: '#app',
     data: {
-        message: 'Hello Vue!',
-        h1Title: 'This is a tooltip!',
-        description: 'This is a test project',
-        pvalue: 0,
         updateLog: [
             {
                 title: 'Beginning of the Vue refactor',
@@ -16,11 +12,13 @@ var app = new Vue({
                         id: '001',
                         summary: 'Change #1',
                         isDisplayDetails: false,
+                        details: 'details for change #1 displayed',
                     },
                     {
                         id: '002',
                         summary: 'Change #2',
                         isDisplayDetails: false,
+                        details: '',
                     },
                 ]
             }
