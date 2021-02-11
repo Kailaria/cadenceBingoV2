@@ -16,21 +16,25 @@
                 button will go.
             </div>
             <div style="display: flex; flex-direction: row;">
-                <div style="flex:flex-shrink; width: 200px">
-                    This is where the index of updates will be listed and selectable.
+                <div style="display: flex; flex-direction: column; flex:flex-shrink; width: 200px">
+                    <div style="flex:auto; cursor:pointer; border-width: thin; border-style: solid; height: 120px" v-for="update in updateLog" :key="update.version"
+                        @click="selectUpdate(update.version)">
+                        <h2>{{ update.version }}</h2>
+                        <p>{{ update.date }}</p>
+                    </div>
                 </div>
-                <div style="flex:flex-grow;" v-for="update in updateLog" :key="update.version">
-                    <h2>{{ update.title }}</h2>
-                    <h4>{{ update.date }}</h4>
-                    <h5>{{ update.version }}</h5>
-                    <p>{{ update.summary }}</p>
-                    <div v-for="change in update.changeLog" :key="change.id">
+                <div style="flex:flex-grow;" id="displayUpdateDiv">
+                    <h2>{{ displayedUpdate.title }}</h2>
+                    <h4>{{ displayedUpdate.date }}</h4>
+                    <h5>{{ displayedUpdate.version }}</h5>
+                    <p>{{ displayedUpdate.summary }}</p>
+                    <div v-for="change in displayedUpdate.changeLog" :key="change.id">
                         <button v-if="change.details !== '' && !change.isDisplayDetails" 
-                            @click="toggleChangeDetails(update.version, change.id)">
+                            @click="toggleChangeDetails(displayedUpdate.version, change.id)">
                             >>
                         </button>
                         <button v-else-if="change.details !== '' && change.isDisplayDetails" 
-                            @click="toggleChangeDetails(update.version, change.id)">
+                            @click="toggleChangeDetails(displayedUpdate.version, change.id)">
                             VV
                         </button>
                         <button v-else disabled="true">

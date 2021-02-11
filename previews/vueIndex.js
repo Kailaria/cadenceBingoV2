@@ -1,3 +1,6 @@
+// import Vue from 'vue'
+// import { Bootstrap, IconsPlugin } from 'bootstrap-vue' 
+
 var app = new Vue({
     el: '#app',
     data: {
@@ -23,13 +26,20 @@ var app = new Vue({
                 ]
             }
         ],
+        displayedUpdate: null,
     },
     methods: {
-        toggleChangeDetails: function(updateVersion, changeId) {
+        toggleChangeDetails(updateVersion, changeId) {
             var theChange = this.updateLog.find(update => update.version === updateVersion)
                 .changeLog.find(change => change.id === changeId);
 
             theChange.isDisplayDetails = !theChange.isDisplayDetails;
+        },
+        selectUpdate(updateVersion) {
+            this.displayedUpdate = this.updateLog.find(update => update.version === updateVersion);
         }
+    },
+    created(){
+        this.displayedUpdate = this.updateLog[0];
     }
 })
