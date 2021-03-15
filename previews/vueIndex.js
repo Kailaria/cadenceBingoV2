@@ -30,7 +30,7 @@ var app = new Vue({
     },
     methods: {
         toggleChangeDetails(updateVersion, changeId) {
-            var theChange = this.updateLog.find(update => update.version === updateVersion)
+            let theChange = this.updateLog.find(update => update.version === updateVersion)
                 .changeLog.find(change => change.id === changeId);
 
             theChange.isDisplayDetails = !theChange.isDisplayDetails;

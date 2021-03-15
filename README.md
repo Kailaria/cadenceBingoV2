@@ -8,14 +8,13 @@ See the Bingo Generator in action [here](https://kailaria.github.io/cadenceBingo
 
 This repository uses the following modules:
 
-* Vue (v2.6.12)
-* Bootstrap (v4.6.0)
-* Bootstrap-Vue (v2.21.2)
+* Vue (v3.0.7)
+* Bootstrap (v5.0.0-beta2)
 
 It's recommended that you use Node Package Manager to install these modules using the following command:
 
 ```
-npm install vue bootstrap bootstrap-vue
+npm install vue bootstrap@next
 ```
 ## Bingo v1.1.1:
 Re-balanced the CoH v1.1.1 changes and modified/added some goals:
