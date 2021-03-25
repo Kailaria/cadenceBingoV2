@@ -42,7 +42,7 @@ import Update from '../models/Update';
         this.displayedUpdate = this.updateLog[0];
     }
 })
-export default class VersionLogView extends Vue
+export default class VersionLog extends Vue
 {
     updateLog: Update[] = [
         {

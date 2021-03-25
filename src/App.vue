@@ -7,12 +7,12 @@
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
 // import HelloWorld from './components/HelloWorld.vue';
-import VersionLogView from './views/VersionLog.vue';
+import VersionLog from './views/VersionLog.vue';
 
 @Options({
   components: {
     // HelloWorld,
-    VersionLogView
+    VersionLog
   },
 })
 export default class App extends Vue {}
