@@ -1,6 +1,6 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import Home from '../views/Home.vue'
-import VersionLog from '@/views/VersionLog.vue'
+import UpdateLog from '@/views/UpdateLog.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -17,9 +17,9 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-    path: '/versionLog',
-    name: 'Version Log',
-    component: VersionLog
+    path: '/updateLog',
+    name: 'Update Log',
+    component: UpdateLog
   }
 ]
 
