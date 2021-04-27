@@ -1,0 +1,135 @@
+<?xml version="1.0"?>
+<update>
+    <title>CoH v1.1.1 Bingo Updates</title>
+    <version>1.01.00</version>
+    <date>2020-05-15</date>
+    <summary>
+        I made multiple changes for CoH v1.1.1, including adding some new goals and rebalancing the "Defeat [boss]" goals a bit.
+    </summary>
+    <changeLog>
+        <change>
+            <id>1</id>
+            <summary>New easy goal: Extend both bridges</summary>
+            <details>Extend the Death Mountain and Gerudo Ruins bridges.</details>
+        </change>
+        <change>
+            <id>2</id>
+            <summary>
+                New easy goal: Get a dungeon map or compass in each instrument dungeon.
+            </summary>
+        </change>
+        <change>
+            <id>3</id>
+            <summary>
+                New easy goal: Get both a map or compass in [each individual instrument dungeon].
+            </summary>
+        </change>
+        <change>
+            <id>4</id>
+            <summary>New easy goal: Buy Dungeon Freddie's Heart (Container)</summary>
+            <details>
+                Buy the 4 heart containers in the 4 instrument dungeons to make a full heart container.
+            </details>
+        </change>
+        <change>
+            <id>5</id>
+            <summary>
+                New Easy goal: All Heart Pieces just outside instrument dungeons
+            </summary>
+            <details>
+                Gerudo Desert SE corner, Lake Hylia NE corner, Death Mountain north of the Cadence cave.
+            </details>
+        </change>
+        <change>
+            <id>6</id>
+            <summary>New Medium goal: Fight two key arenas</summary>
+            <details>
+                Gerudo Desert SE corner, Lake Hylia NE corner, Death Mountain north of the Cadence cave.
+            </details>
+        </change>
+        <change>
+            <id>7</id>
+            <summary>New Medium goal: Purple chest on the gauntlet tile</summary>
+        </change>
+        <change>
+            <id>8</id>
+            <summary>New Medium goal: Clear both Hyrule Bridge caves</summary>
+            <details>
+                Earn a checkmark on the map for the caves in front of Hyrule Castle.
+            </details>
+        </change>
+        <change>
+            <id>9</id>
+            <summary>New Medium goal: Clear all 3 Death Mountain Caves</summary>
+            <details>
+                Earn a checkmark on the map for the caves on Death Mountain (including the waterfall Fairy Fountain)
+            </details>
+        </change>
+        <change>
+            <id>10</id>
+            <summary>New Medium goal: Ask for directions 2 times</summary>
+            <details>
+                Talk to a Potion shop Seer and get your fortune told twice. You need to complete the first objective to get a second fortune.
+            </details>
+        </change>
+        <change>
+            <id>11</id>
+            <summary>New Medium goal: Play fetch with the dog</summary>
+            <details>
+                This is not an actual mechanic, you can only technically pet the dog. However, that is too simple of a goal, so for this, you must use a stick-like/fetchable object while facing the dog in Kakariko: Cane of Somaria, Fire/Ice Rods, or (Magic) Boomerang.
+            </details>
+        </change>
+        <change>
+            <id>12</id>
+            <summary>New Hard goal: Fight 5 key arenas.</summary>
+            <details>
+                It's not necessary to collect the keys within them, just to actually fight that many.
+            </details>
+        </change>
+        <change>
+            <id>13</id>
+            <summary>New Hard goal: Fight all 3 key arenas in Hyrule Castle.</summary>
+            <details>
+                It's not necessary to collect the keys within them, just to actually fight that many.
+            </details>
+        </change>
+        <change>
+            <id>14</id>
+            <summary>
+                New Hard goal: Defeat [Wizroboe/Gohmaracas] using non-explosive A/X/B/Y items.
+            </summary>
+        </change>
+        <change>
+            <id>15</id>
+            <summary>New Hard goal: Defeat [individual instrument boss] honorably</summary>
+            <details>
+                Honorably, in this case, means using *only* a primary weapon, without using your L/R abilities or A/X/B/Y items.
+            </details>
+        </change>
+        <change>
+            <id>16</id>
+            <summary>New Hard goal: Defeat Guitarmos without explosives</summary>
+            <details>
+                This is pretty much in response to the quick kill workshopped by RatRacing.
+            </details>
+        </change>
+        <change>
+            <id>17</id>
+            <summary>
+                Balance change: Removed end goals that were too short (Explore full map, Unlock Yves, Defeat Octavo).
+            </summary>
+            <details>
+                This is mostly a personal preference, but runs that don't go through Future Hyrule feel rather anti-climactic and don't make for interesting viewing as they don't funnel everyone towards one area to show how far ahead or behind everyone is in a race setting.
+            </details>
+        </change>
+        <change>
+            <id>18</id>
+            <summary>
+                Balance change: Reduced the base "defeat boss" and "defeat boss as Link" goals from Hard to Medium.
+            </summary>
+            <details>
+                Since everything is funneling towards Future Hyrule anyway, these goals aren't a time waste, and Link isn't that much more difficult to use than Zelda.
+            </details>
+        </change>
+    </changeLog>
+</update>

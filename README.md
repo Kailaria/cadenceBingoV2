@@ -10,12 +10,21 @@ This repository uses the following modules:
 
 * Vue (v3.0.7)
 * Bootstrap (v5.0.0-beta2)
+* Axios
+* fast-xml-parser
 
-It's recommended that you use Node Package Manager to install these modules using the following command:
+It's recommended that you use Node Package Manager (https://npmjs.com) to install these modules using the following command into a command-line console to get all of the packages used by this project:
 
 ```
-npm install vue bootstrap@next
+npm install
 ```
+
+To run it locally, input the following into the console:
+
+```
+npm run serve
+```
+
 ## Bingo v1.1.1:
 Re-balanced the CoH v1.1.1 changes and modified/added some goals:
 

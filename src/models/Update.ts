@@ -1,4 +1,4 @@
-import Change from './Change.js';
+import Change from './Change';
 
 export default class Update {
     title!: string;
@@ -18,4 +18,25 @@ export default class Update {
             this.summary = summary;
             this.changeLog = changeLog === undefined ? [] : changeLog;
         }
+    
+    static CopyFromJson(jsonObj: any): Update {
+        let theCopy = new Update();
+        theCopy.title = jsonObj.title;
+        theCopy.version = jsonObj.version;
+        theCopy.date = jsonObj.date;
+        theCopy.summary = jsonObj.summary;
+        theCopy.changeLog = new Array<Change>();
+        if (jsonObj.changeLog !== undefined) {
+            jsonObj.changeLog.change.forEach((change: any) => {
+                let copyChange = new Change();
+                copyChange.id = change.id;
+                copyChange.summary = change.summary;
+                copyChange.isDisplayDetails = false;
+                copyChange.details = change.details;
+                theCopy.changeLog.push(copyChange);
+            });
+        }
+
+        return theCopy;
+    }
 }

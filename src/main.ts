@@ -6,5 +6,6 @@ import store from './store'
 import router from './router'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap'
+import 'fast-xml-parser'
 
 createApp(App).use(router).use(store).mount('#app')

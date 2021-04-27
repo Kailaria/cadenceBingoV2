@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<update>
+    <title>CoH v1.1.1 Balance changes</title>
+    <version>1.01.01</version>
+    <date>2020-10-03</date>
+    <summary>Re-balanced the CoH v1.1.1 changes and modified/added some goals.</summary>
+    <changeLog>
+        <change>
+            <id>1</id>
+            <summary>Clarified the Din's Fire goal to just be "Cadence Cave 2 ability"</summary>
+            <details>In case people came across it with Cadence, Link, or Yves.</details>
+        </change>
+        <change>
+            <id>2</id>
+            <summary>
+                Clarified "Touch the Bench" -> Any scenic bench will now qualify, not just "the" bench.
+            </summary>
+            <details>
+                We came across at least one seed where The Bench tile didn't show up anywhere, but there are some newer tiles that are similarly out of the way that have benches, such as the beach amphitheatre with a glass spear on top. The benches in Kakariko or by the Manta shop (where Snorkel and a Bottle are sold for rupees) do *not* count.
+            </details>
+        </change>
+        <change>
+            <id>3</id>
+            <summary>
+                Combined the rings in the open to a single goal "Ring in the Open" (Difficulty: Easy) and excluded the desert generator one from it.
+            </summary>
+            <details>
+                Even though the desert generator Ring of Blasting can mess up our bomb jump/boost skips, it can be picked up on the way with no amount of puzzling besides combat/dodging. The others (Blasting in the Cliffs and Risk in the Forest) have shown themselves to not entirely consistently show up in every seed (at least one seed for either one in recent tests).
+            </details>
+        </change>
+        <change>
+            <id>4</id>
+            <summary>
+                Changed the name of the medium goal about minibosses in dungeon-like caves to "2 Dark Stairs minibosses"
+            </summary>
+        </change>
+        <change>
+            <id>5</id>
+            <summary>
+                Re-enabled the Challenge goal "Skip Nayru's" and modified it to just "Skip R-ability"
+            </summary>
+            <details>
+                Based on feedback during a CoHROW after mentioning that the original goal allows runners to "Skip Nayru's" by starting as Link and picking up the Shield, this has been modified to be more of an overall challenge/restriction on the run to never have an R-ability.
+            </details>
+        </change>
+        <change>
+            <id>6</id>
+            <summary>New Challenge goal: Don't use glass of any sort.</summary>
+            <details>
+                This includes Shovel, Torch, Ring of Preservation, and Slippers on top of glass weapons.
+            </details>
+        </change>
+    </changeLog>
+</update>

@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "@types/bootstrap": "^5.0.12",
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
+    "fast-xml-parser": "^3.19.0",
     "vue": "^3.0.7",
     "vue-class-component": "^8.0.0-0",
     "vue-router": "^4.0.0-0",
@@ -51,7 +53,9 @@
     "parserOptions": {
       "parser": "@typescript-eslint/parser"
     },
-    "rules": {}
+    "rules": {
+      "no-unused-vars": 0
+    }
   },
   "browserslist": [
     "> 1%",

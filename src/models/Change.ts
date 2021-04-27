@@ -1,6 +1,6 @@
 export default class Change {
-    id!: string;
+    id!: number;
     summary!: string;
-    isDisplayDetails: boolean = false;
-    details!: string;
+    isDisplayDetails?: boolean = false;
+    details?: string;
 }
