@@ -12,6 +12,7 @@
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "fast-xml-parser": "^3.19.0",
+    "postcss": "^8.3.0",
     "vue": "^3.0.7",
     "vue-class-component": "^8.0.0-0",
     "vue-router": "^4.0.0-0",
@@ -26,8 +27,8 @@
     "@vue/cli-plugin-router": "^4.5.12",
     "@vue/cli-plugin-typescript": "^4.5.11",
     "@vue/cli-plugin-vuex": "^4.5.12",
-    "@vue/cli-service": "~4.5.0",
-    "@vue/compiler-sfc": "^3.0.0",
+    "@vue/cli-service": "^4.5.13",
+    "@vue/compiler-sfc": "^3.0.11",
     "@vue/eslint-config-typescript": "^5.0.2",
     "babel-eslint": "^10.1.0",
     "bootstrap": "^5.0.0-beta2",
@@ -38,7 +39,8 @@
     "portal-vue": "^2.1.7",
     "sass": "^1.26.11",
     "sass-loader": "^10.0.2",
-    "typescript": "~3.9.3"
+    "typescript": "~3.9.3",
+    "vuex-module-decorators": "^1.0.1"
   },
   "eslintConfig": {
     "root": true,
