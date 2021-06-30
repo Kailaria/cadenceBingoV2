@@ -1,20 +1,8 @@
 <template>
     <div class="container">
         <div class="row justify-content-center">
-            <!-- <div v-if="isUpdateLogLoaded" class="col-sm-3 list-group">
-                <a
-                    class="list-group-item list-group-item-action update-sidebar-item" 
-                    v-for="update in updateLog"
-                    :key="update.version"
-                    @click="onSelectUpdate(update.version)"
-                >
-                    <h2>{{ update.version }}</h2>
-                    <div>{{ update.date }}</div>
-                </a>
-            </div> -->
             <update-log-sidebar @select-update="onSelectUpdate"/>
             <div v-if="displayedUpdate !== undefined" class="col-sm-9" id="displayUpdateDiv">
-                <!-- style="flex:flex-grow;" id="displayUpdateDiv"> -->
                 <h2>{{ displayedUpdate.title }}</h2>
                 <h4>{{ displayedUpdate.date }}</h4>
                 <h5>{{ displayedUpdate.version }}</h5>
