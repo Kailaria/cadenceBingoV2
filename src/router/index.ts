@@ -17,7 +17,7 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-    path: '/updateLog',
+    path: '/updates',
     name: 'Update Log',
     component: UpdateLog
   }

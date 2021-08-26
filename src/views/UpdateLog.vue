@@ -1,9 +1,13 @@
 <template>
-    <div class="container">
-        <div class="row justify-content-center">
+    <div class="px-20 py-10">
+        <div class="flex flex-row">
             <update-log-sidebar @select-update="onSelectUpdate"/>
-            <div v-if="displayedUpdate !== undefined" class="col-sm-9" id="displayUpdateDiv">
-                <h2>{{ displayedUpdate.title }}</h2>
+            <div 
+                v-if="displayedUpdate !== undefined" 
+                class="p-2 bg-gray-600 bg-opacity-75" 
+                id="displayUpdateDiv"
+            >
+                <h1 class="text-4xl text-orange-400 filter drop-shadow-xl font-bold">{{ displayedUpdate.title }}</h1>
                 <h4>{{ displayedUpdate.date }}</h4>
                 <h5>{{ displayedUpdate.version }}</h5>
                 <p>{{ displayedUpdate.summary }}</p>
