@@ -2,33 +2,7 @@
     <div class="px-20 py-10">
         <div class="flex flex-row">
             <update-log-sidebar @select-update="onSelectUpdate"/>
-            <div 
-                v-if="displayedUpdate !== undefined" 
-                class="p-2 bg-gray-600 bg-opacity-75" 
-                id="displayUpdateDiv"
-            >
-                <h1 class="text-4xl text-orange-400 filter drop-shadow-xl font-bold">{{ displayedUpdate.title }}</h1>
-                <h4>{{ displayedUpdate.date }}</h4>
-                <h5>{{ displayedUpdate.version }}</h5>
-                <p>{{ displayedUpdate.summary }}</p>
-                <div v-for="change in displayedUpdate.changeLog" :key="change.id">
-                    <button v-if="change.details !== undefined && change.details !== '' && !change.isDisplayDetails" 
-                        @click="toggleChangeDetails(displayedUpdate.version, change.id)">
-                        >>
-                    </button>
-                    <button v-else-if="change.details !== undefined && change.details !== '' && change.isDisplayDetails" 
-                        @click="toggleChangeDetails(displayedUpdate.version, change.id)">
-                        VV
-                    </button>
-                    <button v-else disabled="true">
-                        --
-                    </button>
-                    <span>{{ change.summary }}</span>
-                    <div v-if="change.isDisplayDetails">
-                        {{ change.details }}
-                    </div>
-                </div>
-            </div>
+            <update-log-details :displayedUpdateVersion="displayedUpdateVersion"/>
         </div>
     </div>
 </template>
@@ -38,10 +12,12 @@ import {Options, Vue} from 'vue-class-component';
 import Update from '@/models/Update';
 import UpdateLogsModule from '@/store/modules/update-logs/update-log-module';
 import UpdateLogSidebar from '@/components/UpdateLogSidebar.vue';
+import UpdateLogDetails from '@/components/UpdateLogDetails.vue';
 
 @Options({
     components: {
-        UpdateLogSidebar
+        UpdateLogSidebar,
+        UpdateLogDetails
     }
 })
 export default class UpdateLog extends Vue

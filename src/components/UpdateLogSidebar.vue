@@ -42,7 +42,7 @@ import UpdateLogsModule from '@/store/modules/update-logs/update-log-module';
 @Options({
     emits: [
         'selectUpdate'
-        ]
+    ]
 })
 export default class UpdateLogSidebar extends Vue
 {
