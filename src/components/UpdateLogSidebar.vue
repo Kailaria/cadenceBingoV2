@@ -46,12 +46,19 @@ import UpdateLogsModule from '@/store/modules/update-logs/update-log-module';
 })
 export default class UpdateLogSidebar extends Vue
 {
-    selectedUpdateVersion: string = '';
+    private theSelectedUpdateVersion: string = '';
     mounted(){
         if (!this.isUpdateLogLoaded) {
             return;
         }
-        this.selectedUpdateVersion = this.updateLog[0].version;
+        this.theSelectedUpdateVersion = this.updateLog[0].version;
+    }
+
+    get selectedUpdateVersion() : string {
+        if (this.isUpdateLogLoaded && this.theSelectedUpdateVersion === '') {
+            this.theSelectedUpdateVersion = this.updateLog[0].version;
+        }
+        return this.theSelectedUpdateVersion;
     }
 
     get isUpdateLogLoaded() : boolean {
@@ -70,7 +77,7 @@ export default class UpdateLogSidebar extends Vue
     }
 
     selectUpdate(updateVersion: string) {
-        this.selectedUpdateVersion = updateVersion;
+        this.theSelectedUpdateVersion = updateVersion;
         this.$emit('selectUpdate', updateVersion);
     }
 }

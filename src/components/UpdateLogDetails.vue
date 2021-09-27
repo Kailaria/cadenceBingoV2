@@ -4,11 +4,11 @@
         class="p-2 bg-gray-600 bg-opacity-75" 
         id="displayUpdateDiv"
     >
-        <h1 class="text-4xl text-orange-400 filter drop-shadow-xl font-bold">{{ displayedUpdate.title }}</h1>
-        <h4>{{ displayedUpdate.date }}</h4>
-        <h5>{{ displayedUpdate.version }}</h5>
-        <p>{{ displayedUpdate.summary }}</p>
-        <div v-for="change in displayedUpdate.changeLog" :key="change.id">
+        <h1 class="title">{{ displayedUpdate.title }}</h1>
+        <h4 class="text-blueGray-300">Released: {{ displayedUpdate.date }}</h4>
+        <h5 class="text-orange-500 font-bold pb-1">Version {{ displayedUpdate.version }}</h5>
+        <p class="text-gray-100 pb-1">{{ displayedUpdate.summary }}</p>
+        <div class="text-gray-100" v-for="change in displayedUpdate.changeLog" :key="change.id">
             <button v-if="change.details !== undefined && change.details !== '' && !change.isDisplayDetails" 
                 @click="toggleChangeDetails(displayedUpdate.version, change.id)">
                 >>
@@ -21,7 +21,7 @@
                 --
             </button>
             <span>{{ change.summary }}</span>
-            <div v-if="change.isDisplayDetails">
+            <div class="ml-4" v-if="change.isDisplayDetails">
                 {{ change.details }}
             </div>
         </div>
@@ -51,7 +51,7 @@ import UpdateLogsModule from '@/store/modules/update-logs/update-log-module';
     }
 })
 export default class UpdateLogDetails extends Vue {
-    private _displayedUpdateVersion: string = "";
+    private theDisplayedUpdateVersion: string = "";
 
     toggleChangeDetails(updateVersion: string, changeId: number) {
         let theUpdate = UpdateLogsModule.updates.find(update => update.version === updateVersion)
@@ -70,7 +70,7 @@ export default class UpdateLogDetails extends Vue {
             this.displayedUpdate.changeLog.every(change => change.isDisplayDetails = false);
         }
         let foundUpdate = UpdateLogsModule.updates.find(update => update.version === updateVersion);
-        this._displayedUpdateVersion = foundUpdate === undefined ? this._displayedUpdateVersion : updateVersion;
+        this.theDisplayedUpdateVersion = foundUpdate === undefined ? this.theDisplayedUpdateVersion : updateVersion;
     }
 
     get isUpdateLogLoaded() : boolean {
@@ -81,10 +81,10 @@ export default class UpdateLogDetails extends Vue {
         if (!this.isUpdateLogLoaded) {
             return new Update();
         }
-        if (this._displayedUpdateVersion === '') {
-            this._displayedUpdateVersion = UpdateLogsModule.updates[0].version;
+        if (this.theDisplayedUpdateVersion === '') {
+            this.theDisplayedUpdateVersion = UpdateLogsModule.updates[0].version;
         }
-        let theUpdate = UpdateLogsModule.findByVersion(this._displayedUpdateVersion);
+        let theUpdate = UpdateLogsModule.findByVersion(this.theDisplayedUpdateVersion);
         return theUpdate === undefined ? new Update() : theUpdate;
     }
 
@@ -98,5 +98,7 @@ export default class UpdateLogDetails extends Vue {
 </script>
 
 <style lang="postcss" scoped>
-
+    #displayUpdateDiv h1.title {
+        @apply text-4xl text-orange-400 filter drop-shadow-xl font-bold
+    }
 </style>

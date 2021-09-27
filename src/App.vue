@@ -22,6 +22,6 @@
 }
 
 #nav a.router-link-exact-active {
-  @apply text-red-400;
+  @apply text-orange-400;
 }
 </style>
