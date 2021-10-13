@@ -29,21 +29,11 @@ export default class UpdateLog extends Vue
         UpdateLogsModule.initUpdateLog();
     }
 
-    toggleChangeDetails(updateVersion: string, changeId: number) {
-        let theUpdate = UpdateLogsModule.updates.find(update => update.version === updateVersion)
-        if (theUpdate === undefined)
-        {
-            return;
-        }
-        let theChange = theUpdate.changeLog.find(change => change.id === changeId);
-        if (theChange !== undefined)
-        {
-            theChange.isDisplayDetails = !theChange.isDisplayDetails;
-        }
-    }
     onSelectUpdate(updateVersion: string) {
         if (this.displayedUpdate !== undefined && this.displayedUpdate.changeLog.length > 0) {
-            this.displayedUpdate.changeLog.every(change => change.isDisplayDetails = false);
+            for (let change of this.displayedUpdate.changeLog) {
+                change.isDisplayDetails = false;
+            }
         }
         let foundUpdate = UpdateLogsModule.updates.find(update => update.version === updateVersion);
         this.displayedUpdateVersion = foundUpdate === undefined ? this.displayedUpdateVersion : updateVersion;

@@ -13,6 +13,7 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
+    "useDefineForClassFields": true,
     "baseUrl": ".",
     "types": [
       "webpack-env"
