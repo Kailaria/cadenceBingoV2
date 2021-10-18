@@ -1,18 +1,19 @@
 <template>
     <div class="text-gray-100">
-        <button v-if="change.details !== undefined && change.details !== '' && !change.isDisplayDetails" 
+        <button v-if="change.details !== undefined && change.details !== ''" 
             @click="toggleChangeDetails()">
-            >>
+            <img src="../assets/Details_arrow.png"
+                class="transform transition-transform"
+                :class="{
+                    'rotate-90': change.isDisplayDetails,
+                }"
+            >
         </button>
-        <button v-else-if="change.details !== undefined && change.details !== '' && change.isDisplayDetails" 
-            @click="toggleChangeDetails()">
-            VV
-        </button>
-        <button v-else disabled="true">
-            --
+        <button v-else class="cursor-default">
+            <img src="../assets/Details_arrow_disabled.png">
         </button>
         <span>{{ change.summary }}</span>
-        <div class="ml-4" v-if="change.isDisplayDetails">
+        <div class="md:ml-4 lg:ml-8 border-2 rounded border-yellow-500 bg-gray-600" v-if="change.isDisplayDetails">
             {{ change.details }}
         </div>
     </div>
