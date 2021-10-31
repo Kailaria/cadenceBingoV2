@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
 import Home from '../views/Home.vue'
 import UpdateLog from '@/views/UpdateLog.vue'
+import BingoBoard from '@/views/BingoBoard.vue'
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -17,9 +18,14 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-    path: '/updates',
+    path: '/updates/:date?',
     name: 'Update Log',
     component: UpdateLog
+  },
+  {
+    path: '/bingo-generator',
+    name: 'Bingo Generator',
+    component: BingoBoard
   }
 ]
 

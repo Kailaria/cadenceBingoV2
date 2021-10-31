@@ -61,11 +61,13 @@ export default class UpdateLogDetails extends Vue {
     }
 
     get displayedUpdate() : Update {
+        let me = this;
         if (!this.isUpdateLogLoaded) {
             return new Update();
         }
         if (this.theDisplayedUpdateVersion === '') {
-            this.theDisplayedUpdateVersion = UpdateLogsModule.updates[0].version;
+            let routedUpdate = UpdateLogsModule.updates.find(update => update.date === me.$route.params.date);
+            this.theDisplayedUpdateVersion = (routedUpdate !== undefined ? routedUpdate : UpdateLogsModule.updates[0]).version;
         }
         let theUpdate = UpdateLogsModule.findByVersion(this.theDisplayedUpdateVersion);
         return theUpdate === undefined ? new Update() : theUpdate;

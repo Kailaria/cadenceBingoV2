@@ -5,7 +5,7 @@
         class="flex-none flex flex-col mx-4 space-y-0.5 bg-transparent"
     > <!--class="col-sm-3 list-group"-->
         <!--<a class="list-group-item list-group-item-action update-sidebar-item" -->
-        <a
+        <router-link
             class="border-2 p-2 cursor-pointer bg-opacity-75 text-white hover:text-blueGray-300"
             :class="{
                 'selected': isSelectedUpdate(update.version),
@@ -14,6 +14,7 @@
             v-for="update in updateLog"
             :key="update.version"
             @click="selectUpdate(update.version)"
+            :to="{name: 'Update Log', params: {date: update.date}}"
         >
             <h1 class="text-2xl font-bold">Version {{ update.version }}</h1>
             <div
@@ -24,7 +25,7 @@
                 }">
                 Released {{ update.date }}
             </div>
-        </a>
+        </router-link>
     </div>
     <div v-if="!isUpdateLogLoaded" class="col-sm-3 list-group">
         <a class="list-group-item update-sidebar-item">
@@ -55,8 +56,10 @@ export default class UpdateLogSidebar extends Vue
     }
 
     get selectedUpdateVersion() : string {
+        let me = this;
         if (this.isUpdateLogLoaded && this.theSelectedUpdateVersion === '') {
-            this.theSelectedUpdateVersion = this.updateLog[0].version;
+            let routedUpdate = UpdateLogsModule.updates.find(update => update.date === me.$route.params.date);
+            this.theSelectedUpdateVersion = (routedUpdate !== undefined ? routedUpdate : this.updateLog[0]).version;
         }
         return this.theSelectedUpdateVersion;
     }

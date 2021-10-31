@@ -1,8 +1,9 @@
 <template>
   <div id="nav" class="nav">
     <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link> |
-    <router-link to="/updates">Updates</router-link>
+    <router-link to="/bingo-generator">Bingo Generator</router-link> |
+    <router-link :to="{name: 'Update Log'}">Updates</router-link> |
+    <router-link to="/about">About</router-link>
   </div>
   <router-view/>
 </template>
@@ -21,7 +22,7 @@
   @apply font-bold text-blueGray-800;
 }
 
-#nav a.router-link-exact-active {
+#nav a.router-link-active {
   @apply text-orange-400;
 }
 </style>
