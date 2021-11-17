@@ -1,0 +1,1947 @@
+<?xml version="1.0"?>
+<goals>
+    <!-- Begin Easy Goals -->
+
+    <goal>
+        <key>1potion</key>
+        <text>Open 1 Potion Shop</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>5</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>8hearts</key>
+        <text>Have 8 Hearts</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>5</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>dinsFire</key>
+        <text>Din's Fire</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <expirationVersion>1.1.1</expirationVersion>
+        <difficultyWeight>5</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>noCadenceCaves</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>cadenceCave2</key>
+        <text>Din's Fire / Spin Attack</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>5</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>noCadenceCaves</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>shieldTechnique</key>
+        <text>Shield Technique</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>5</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>noCadenceCaves</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>bombBag</key>
+        <text>Big Bomb Bag</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>5</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>quiver</key>
+        <text>Big Quiver</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <expirationVersion>1.1.1</expirationVersion>
+        <difficultyWeight>5</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>10stones</key>
+        <text>Activate 10 Sheikah Stones</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>5</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>freddie</key>
+        <text>Defeat Freddie</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>5</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>saveFreddie</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>snorkel</key>
+        <text>Snorkel</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>5</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>bench</key>
+        <text>Touch the Bench</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <expirationVersion>1.1.1</expirationVersion>
+        <difficultyWeight>5</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>bench</key>
+        <text>Touch a Bench on a scenic setpiece</text>
+        <tooltip>
+            Either the one on the grasslands temple or one of the three on the beach's amphitheater (with a glass spear on top), but not the one in front of the Manta shop (Rupee Bottle and Snorkel)
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>5</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>gerudoPuzzle</key>
+        <text>Gerudo Village Puzzle</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>5</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>windmillPuzzle</key>
+        <text>Windmill Puzzle</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>5</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>tinglePuzzle</key>
+        <text>Tingle Puzzle</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>5</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>yves</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>5seeds</key>
+        <text>Hold 5 Deku Seeds</text>
+        <tooltip>You may use them as payment after achievement of this goal.</tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>5</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>yves</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>3gears</key>
+        <text>3 Gears</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>5</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>zoraPrince</key>
+        <text>Wake the Zora Prince</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>5</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>keymos</key>
+        <text>Kill Keymos</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>5</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>fountainRing</key>
+        <text>Collect a fountain Ring</text>
+        <tooltip>
+            A Ring of Risk from the Forest fountain or a Ring of Blasting from the Cliffs fountain
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>5</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>goronCharm</key>
+        <text>Goron Charm</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>5</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>infuse</key>
+        <text>Infuse Weapon</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>5</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>extendBridges</key>
+        <text>Extend both bridges</text>
+        <tooltip>
+            You will need 3 gears and to talk to the Gerudo inside the ruins, as well as extend the bridge in Death Mountain.
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>5</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>dungeonMapping</key>
+        <text>Get a dungeon map or compass in each instrument dungeon</text>
+        <tooltip>
+            You only need one or the other in each dungeon: Frozen Grotto, Gerudo Ruins, Temple of Storms, and Lost Swamp.
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>5</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>grottoFullMapping</key>
+        <text>Compass and Map in Frozen Grotto</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>5</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>ruinsFullMapping</key>
+        <text>Compass and Map in Gerudo Ruins</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>5</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>stormsFullMapping</key>
+        <text>Compass and Map in Temple of Storms</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>5</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>swampFullMapping</key>
+        <text>Compass and Map in Lost Swamp</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>5</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>freddieHeart</key>
+        <text>Buy Dungeon Freddie's Heart (Container)</text>
+        <tooltip>
+            Buy all four Heart Pieces in Freddie's shops in the instrument dungeons. There's always one in each instrument dungeon's 1F.
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>5</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>dungeonOWHeartPieces</key>
+        <text>All Heart Pieces on instrument dungeon tiles</text>
+        <tooltip>
+            Collect all 3 heart pieces in the 3 large-area Overworld portions outside of instrument dungeons: Gerudo Desert (outside Gerudo Ruins), Lake Hylia (outside Frozen Grotto), and Death Mountain (outside Temple of Storms).
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>5</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+
+    <!-- End Easy Goals -->
+    <!-- Begin Medium Goals -->
+    
+    <goal>
+        <key>quiver</key>
+        <text>Big Quiver</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>mines1</key>
+        <text>Gerudo Mines F1 Miniboss</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>mines2</key>
+        <text>Gerudo Mines F2 Miniboss</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>grotto1</key>
+        <text>Frozen Grotto F1 Miniboss</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>grotto2</key>
+        <text>Frozen Grotto F2 Miniboss</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>swamp1</key>
+        <text>Lost Swamp F1 Miniboss</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>swamp2</key>
+        <text>Lost Swamp F2 Miniboss</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>storms1</key>
+        <text>Temple of Storms F1 Miniboss</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>storms2</key>
+        <text>Temple of Storms F2 Miniboss</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>3mapItems</key>
+        <text>3 Overworld Mapping Items</text>
+        <tooltip>Three of Cave / Treasure / Skull / Warp Charm and Telescope</tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>4mapItems</key>
+        <text>4 Overworld Mapping Items</text>
+        <tooltip>Four of Cave / Treasure / Skull / Warp Charm and Telescope</tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>2potions</key>
+        <text>Open 2 Potion Shops</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>3potions</key>
+        <text>Open 3 Potion Shops</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>10hearts</key>
+        <text>Have 10 Hearts</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>15stones</key>
+        <text>Activate 15 Sheikah Stones</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>goronCharm</key>
+        <text>Goron Charm</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <expirationVersion>1.1.1</expirationVersion>
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>2bottles</key>
+        <text>2 Bottles</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>3bottles</key>
+        <text>3 Bottles</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>noDiamonds</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>fourCorners</key>
+        <text>Explore the Four Corners</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>allExplored</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>exploreBeach</key>
+        <text>Explore Every Beach Tile</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>allExplored</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>exploreDesert</key>
+        <text>Explore Every Desert Tile</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>allExplored</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>exploreSwamp</key>
+        <text>Explore Every Swamp Tile</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>allExplored</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>exploreMountains</key>
+        <text>Explore Every Mountain Tile</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>allExplored</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>2fountains</key>
+        <text>Open 2 Fairy Fountains</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>staminaUp</key>
+        <text>Get Stamina Increase</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>yves</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>4gears</key>
+        <text>4 Gears</text>
+        <tooltip>
+            WARNING: The 4th gear has a low% chance of not spawning in some seeds.
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>4daggers</key>
+        <text>4 Special Daggers / Shortswords</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>iAmError</key>
+        <text>I AM ERROR</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <expirationVersion>1.1.1</expirationVersion>
+        <difficultyWeight>15</difficultyWeight>
+    </goal>
+    <goal>
+        <key>250rupees</key>
+        <text>Hold 250 Rupees</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>4keys</key>
+        <text>Hold 4 Keys</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>10diamonds</key>
+        <text>Hold 10 Diamonds</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>15diamonds</key>
+        <text>Hold 15 Diamonds</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>infuse</key>
+        <text>Infuse Weapon</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <expirationVersion>1.1.1</expirationVersion>
+        <difficultyWeight>15</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>noInfuse</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>2darkStairs</key>
+        <text>Defeat 2 Dark Stairs Minibosses</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <expirationVersion>1.1.1</expirationVersion>
+        <difficultyWeight>15</difficultyWeight>
+    </goal>
+    <goal>
+        <key>2darkStairs</key>
+        <text>Defeat 2 cave dungeon Minibosses</text>
+        <tooltip>
+            These are typically indicated by the staircases being dark, bleeding darkness to the tiles around it; inside looks similar to Kakariko Crypt, except linear in layout. WARNING: While at least 2 existing in a seed is highly likely, it's possible that there might be only 1.
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>15</difficultyWeight>
+    </goal>
+    <goal>
+        <key>2puzzleCaves</key>
+        <text>Open 2 Puzzle Cave Purple Chests</text>
+        <tooltip>
+            Puzzle caves are the ones with round entrances. One always appears by Zelda's tower, and one always appears by Link's house.
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>wakeLink</key>
+        <text>Unlock Link/Zelda</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>wakeLink</key>
+        <text>Unlock Link/Zelda</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>octavo</exclusionKey>
+            <exclusionKey>ganon</exclusionKey>
+            <exclusionKey>legendaryWeapons</exclusionKey>
+            <exclusionKey>characterWeapons</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>cadence</key>
+        <text>Unlock Cadence</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>fairyBottle</key>
+        <text>Fairy in a Bottle</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>beeBottle</key>
+        <text>Bee in a Bottle</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>antifairyBottle</key>
+        <text>Anti-Fairy in a Bottle</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>fishBottle</key>
+        <text>Fish in a Bottle</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>hoverShrine</key>
+        <text>Clear the Hover Shrine</text>
+        <tooltip>You do not need to open the chest once you clear the screen.</tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>oboe</key>
+        <text>Defeat Wizroboe</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>15</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>octavo</exclusionKey>
+            <exclusionKey>ganon</exclusionKey>
+            <exclusionKey>legendaryWeapons</exclusionKey>
+            <exclusionKey>characterWeapons</exclusionKey>
+            <exclusionKey>oboeLink</exclusionKey>
+            <exclusionKey>oboeCadence</exclusionKey>
+            <exclusionKey>oboeNoBombs</exclusionKey>
+            <exclusionKey>oboeAbxyOnly</exclusionKey>
+            <exclusionKey>oboeHonor</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>oboeLink</key>
+        <text>Defeat Wizroboe as Link</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>15</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>oboe</exclusionKey>
+            <exclusionKey>oboeCadence</exclusionKey>
+            <exclusionKey>oboeNoBombs</exclusionKey>
+            <exclusionKey>oboeAbxyOnly</exclusionKey>
+            <exclusionKey>oboeHonor</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>glockenspiel</key>
+        <text>Defeat Gleeokenspiel</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>15</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>octavo</exclusionKey>
+            <exclusionKey>ganon</exclusionKey>
+            <exclusionKey>legendaryWeapons</exclusionKey>
+            <exclusionKey>characterWeapons</exclusionKey>
+            <exclusionKey>glockenspielLink</exclusionKey>
+            <exclusionKey>glockenspielCadence</exclusionKey>
+            <exclusionKey>glockenspielNoBombs</exclusionKey>
+            <exclusionKey>glockenspielAllHeads</exclusionKey>
+            <exclusionKey>glockenspielHonor</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>glockenspielLink</key>
+        <text>Defeat Gleeokenspiel as Link</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>15</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>glockenspiel</exclusionKey>
+            <exclusionKey>glockenspielCadence</exclusionKey>
+            <exclusionKey>glockenspielNoBombs</exclusionKey>
+            <exclusionKey>glockenspielAllHeads</exclusionKey>
+            <exclusionKey>glockenspielHonor</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>bass</key>
+        <text>Defeat Bass Guitarmos Knights</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>15</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>octavo</exclusionKey>
+            <exclusionKey>ganon</exclusionKey>
+            <exclusionKey>legendaryWeapons</exclusionKey>
+            <exclusionKey>characterWeapons</exclusionKey>
+            <exclusionKey>bassLink</exclusionKey>
+            <exclusionKey>bassCadence</exclusionKey>
+            <exclusionKey>bassBase</exclusionKey>
+            <exclusionKey>bassNoBombs</exclusionKey>
+            <exclusionKey>bassHonor</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>bassLink</key>
+        <text>Defeat Bass Guitarmos Knights as Link</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>15</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>bass</exclusionKey>
+            <exclusionKey>bassCadence</exclusionKey>
+            <exclusionKey>bassBase</exclusionKey>
+            <exclusionKey>bassNoBombs</exclusionKey>
+            <exclusionKey>bassHonor</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>maracas</key>
+        <text>Defeat Gohmaracas</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>15</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>octavo</exclusionKey>
+            <exclusionKey>ganon</exclusionKey>
+            <exclusionKey>legendaryWeapons</exclusionKey>
+            <exclusionKey>characterWeapons</exclusionKey>
+            <exclusionKey>maracasLink</exclusionKey>
+            <exclusionKey>maracasCadence</exclusionKey>
+            <exclusionKey>maracasBase</exclusionKey>
+            <exclusionKey>maracasAllBushes</exclusionKey>
+            <exclusionKey>maracasAxbyOnly</exclusionKey>
+            <exclusionKey>maracasHonor</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>maracasLink</key>
+        <text>Defeat Gohmaracas as Link</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>15</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>maracas</exclusionKey>
+            <exclusionKey>maracasCadence</exclusionKey>
+            <exclusionKey>maracasBase</exclusionKey>
+            <exclusionKey>maracasAllBushes</exclusionKey>
+            <exclusionKey>maracasAxbyOnly</exclusionKey>
+            <exclusionKey>maracasHonor</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>keyArenas2</key>
+        <text>Fight Two Key Arenas</text>
+        <tooltip>
+            You do not need to grab the keys if you don't want to.
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>15</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>keyArenas5</exclusionKey>
+            <exclusionKey>keyArenasHC</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>gauntletPurple</key>
+        <text>Purple Chest on the Gauntlet Tile</text>
+        <tooltip>
+            Open the purple chest on the two-tile wide Gauntlet Overworld tile. This usually involves a puzzle of sorts to reach. The particular screen is NOT the Hyrule Castle Bridge tile.
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey>keyArenas5</exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>bridgeCaves</key>
+        <text>Clear both Hyrule Bridge caves</text>
+        <tooltip>
+            The map must show an 'X' on both staircase icons of Hyrule Brdige's map tiles.
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey>keyArenas5</exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>deathMountainCaves</key>
+        <text>Clear All 3 Death Mountain Caves</text>
+        <tooltip>
+            The map must show an 'X' on all 3 staircase icons of Death Mountain's map tiles (the one beneath ToS, and the two in the center tiles of DM above Windmill Hut.
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey>keyArenas5</exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>fortunes2</key>
+        <text>Clear 2 Fortune Quests</text>
+        <tooltip>
+            Pay the Potion Shopkeep to have your fortune told. You can only have one Fortune told at a time, so you must clear the first one before you can pay for a second.
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey>keyArenas5</exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>dogFetch</key>
+        <text>Play Fetch with the Dog</text>
+        <tooltip>
+            Use Ice Rod OR Fire Rod OR Can of Somaria OR (Magic) Boomerang while facing the dog in Kakariko (this is not an in-game-recognized interaction; it's just a way to incorporate the Kakariko dog into the bingo that isn't just "Pet the dog").
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>15</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey>keyArenas5</exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+
+    <!-- End Medium Goals -->
+    <!-- Begin Hard Goals -->
+    
+    <goal>
+        <key>oboe</key>
+        <text>Defeat Wizroboe</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <expirationVersion>1.1.1</expirationVersion>
+        <difficultyWeight>25</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>octavo</exclusionKey>
+            <exclusionKey>ganon</exclusionKey>
+            <exclusionKey>legendaryWeapons</exclusionKey>
+            <exclusionKey>characterWeapons</exclusionKey>
+            <exclusionKey>oboeLink</exclusionKey>
+            <exclusionKey>oboeCadence</exclusionKey>
+            <exclusionKey>oboeNoBombs</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>oboeLink</key>
+        <text>Defeat Wizroboe as Link</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <expirationVersion>1.1.1</expirationVersion>
+        <difficultyWeight>25</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>oboe</exclusionKey>
+            <exclusionKey>oboeCadence</exclusionKey>
+            <exclusionKey>oboeNoBombs</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>oboeCadence</key>
+        <text>Defeat Wizroboe as Cadence</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>25</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>oboe</exclusionKey>
+            <exclusionKey>oboeLink</exclusionKey>
+            <exclusionKey>oboeNoBombs</exclusionKey>
+            <exclusionKey>oboeAbxyOnly</exclusionKey>
+            <exclusionKey>oboeHonor</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>oboeNoBombs</key>
+        <text>Defeat Wizroboe without using explosives</text>
+        <tooltip>Bombs, Bombchus, Din's Fire, and Bomb Fairies are all banned.</tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <expirationVersion>1.1.1</expirationVersion>
+        <difficultyWeight>25</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>oboe</exclusionKey>
+            <exclusionKey>oboeLink</exclusionKey>
+            <exclusionKey>oboeCadence</exclusionKey>
+            <exclusionKey>oboeAbxyOnly</exclusionKey>
+            <exclusionKey>oboeHonor</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>glockenspiel</key>
+        <text>Defeat Gleeokenspiel</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <expirationVersion>1.1.1</expirationVersion>
+        <difficultyWeight>25</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>octavo</exclusionKey>
+            <exclusionKey>ganon</exclusionKey>
+            <exclusionKey>legendaryWeapons</exclusionKey>
+            <exclusionKey>characterWeapons</exclusionKey>
+            <exclusionKey>glockenspielLink</exclusionKey>
+            <exclusionKey>glockenspielCadence</exclusionKey>
+            <exclusionKey>glockenspielNoBombs</exclusionKey>
+            <exclusionKey>glockenspielAllHeads</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>glockenspielLink</key>
+        <text>Defeat Gleeokenspiel as Link</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <expirationVersion>1.1.1</expirationVersion>
+        <difficultyWeight>25</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>glockenspiel</exclusionKey>
+            <exclusionKey>glockenspielCadence</exclusionKey>
+            <exclusionKey>glockenspielNoBombs</exclusionKey>
+            <exclusionKey>glockenspielAllHeads</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>glockenspielCadence</key>
+        <text>Defeat Gleeokenspiel as Cadence</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>25</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>glockenspiel</exclusionKey>
+            <exclusionKey>glockenspielLink</exclusionKey>
+            <exclusionKey>glockenspielNoBombs</exclusionKey>
+            <exclusionKey>glockenspielAllHeads</exclusionKey>
+            <exclusionKey>glockenspielHonor</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>glockenspielNoBombs</key>
+        <text>Defeat Gleeokenspiel without using explosives</text>
+        <tooltip>Bombs, Bombchus, Din's Fire, and Bomb Fairies are all banned.</tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>25</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>glockenspiel</exclusionKey>
+            <exclusionKey>glockenspielLink</exclusionKey>
+            <exclusionKey>glockenspielCadence</exclusionKey>
+            <exclusionKey>glockenspielAllHeads</exclusionKey>
+            <exclusionKey>glockenspielHonor</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>glockenspielAllHeads</key>
+        <text>Defeat Gleeokenspiel after killing every Gleeokenspiel Head</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>25</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>glockenspiel</exclusionKey>
+            <exclusionKey>glockenspielLink</exclusionKey>
+            <exclusionKey>glockenspielCadence</exclusionKey>
+            <exclusionKey>glockenspielNoBombs</exclusionKey>
+            <exclusionKey>glockenspielHonor</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>glockenspielHonor</key>
+        <text>Defeat Gleeokenspiel "honorably"</text>
+        <tooltip>
+            Use ONLY a permanent (non-glass) weapon and your L/R abilities to kill Gleeokenspiel.
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>25</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>glockenspiel</exclusionKey>
+            <exclusionKey>glockenspielLink</exclusionKey>
+            <exclusionKey>glockenspielCadence</exclusionKey>
+            <exclusionKey>glockenspielNoBombs</exclusionKey>
+            <exclusionKey>glockenspielAllHeads</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>bass</key>
+        <text>Defeat Bass Guitarmos Knights</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <expirationVersion>1.1.1</expirationVersion>
+        <difficultyWeight>25</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>octavo</exclusionKey>
+            <exclusionKey>ganon</exclusionKey>
+            <exclusionKey>legendaryWeapons</exclusionKey>
+            <exclusionKey>characterWeapons</exclusionKey>
+            <exclusionKey>bassLink</exclusionKey>
+            <exclusionKey>bassCadence</exclusionKey>
+            <exclusionKey>bassBase</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>bassLink</key>
+        <text>Defeat Bass Guitarmos Knights as Link</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <expirationVersion>1.1.1</expirationVersion>
+        <difficultyWeight>25</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>bass</exclusionKey>
+            <exclusionKey>bassCadence</exclusionKey>
+            <exclusionKey>bassBase</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>bassCadence</key>
+        <text>Defeat Bass Guitarmos Knights as Cadence</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>25</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>bass</exclusionKey>
+            <exclusionKey>bassLink</exclusionKey>
+            <exclusionKey>bassBase</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>bassBase</key>
+        <text>Defeat Bass Guitarmos Knights using base dagger / shortsword</text>
+        <tooltip>Items and skills are allowed.</tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <expirationVersion>1.1.1</expirationVersion>
+        <difficultyWeight>25</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>bass</exclusionKey>
+            <exclusionKey>bassLink</exclusionKey>
+            <exclusionKey>bassCadence</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>maracas</key>
+        <text>Defeat Gohmaracas</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <expirationVersion>1.1.1</expirationVersion>
+        <difficultyWeight>25</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>octavo</exclusionKey>
+            <exclusionKey>ganon</exclusionKey>
+            <exclusionKey>legendaryWeapons</exclusionKey>
+            <exclusionKey>characterWeapons</exclusionKey>
+            <exclusionKey>maracasLink</exclusionKey>
+            <exclusionKey>maracasCadence</exclusionKey>
+            <exclusionKey>maracasBase</exclusionKey>
+            <exclusionKey>maracasAllBushes</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>maracasLink</key>
+        <text>Defeat Gohmaracas as Link</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <expirationVersion>1.1.1</expirationVersion>
+        <difficultyWeight>25</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>maracas</exclusionKey>
+            <exclusionKey>maracasCadence</exclusionKey>
+            <exclusionKey>maracasBase</exclusionKey>
+            <exclusionKey>maracasAllBushes</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>maracasCadence</key>
+        <text>Defeat Gohmaracas as Cadence</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>25</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>maracas</exclusionKey>
+            <exclusionKey>maracasLink</exclusionKey>
+            <exclusionKey>maracasBase</exclusionKey>
+            <exclusionKey>maracasAllBushes</exclusionKey>
+            <exclusionKey>maracasAxbyOnly</exclusionKey>
+            <exclusionKey>maracasHonor</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>maracasBase</key>
+        <text>Defeat Gohmaracas using base dagger / shortsword</text>
+        <tooltip>Items and skills are allowed.</tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>25</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>maracas</exclusionKey>
+            <exclusionKey>maracasLink</exclusionKey>
+            <exclusionKey>maracasCadence</exclusionKey>
+            <exclusionKey>maracasAllBushes</exclusionKey>
+            <exclusionKey>maracasAxbyOnly</exclusionKey>
+            <exclusionKey>maracasHonor</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>maracasAllBushes</key>
+        <text>Defeat Gohmaracas after breaking every bush in the arena</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>25</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>maracas</exclusionKey>
+            <exclusionKey>maracasLink</exclusionKey>
+            <exclusionKey>maracasCadence</exclusionKey>
+            <exclusionKey>maracasBase</exclusionKey>
+            <exclusionKey>maracasAxbyOnly</exclusionKey>
+            <exclusionKey>maracasHonor</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>maracasAxbyOnly</key>
+        <text>Defeat Gohmaracas using ONLY non-explosive A/X/B/Y items</text>
+        <tooltip>
+            Weapons, L/R abilities, bomb(chu)s, and bomb fairies are not allowed to hurt Gohmaracas (equip a dagger to minimize accidental pokes; you may use forbidden weapons against small gohmas)
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>25</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>maracas</exclusionKey>
+            <exclusionKey>maracasLink</exclusionKey>
+            <exclusionKey>maracasCadence</exclusionKey>
+            <exclusionKey>maracasBase</exclusionKey>
+            <exclusionKey>maracasAllBushes</exclusionKey>
+            <exclusionKey>maracasHonor</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>maracasHonor</key>
+        <text>Defeat Gohmaracas "honorably"</text>
+        <tooltip>
+            Use ONLY a permanent (non-glass) weapon and your L/R abilities to kill Gohmaracas.
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>25</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>maracas</exclusionKey>
+            <exclusionKey>maracasLink</exclusionKey>
+            <exclusionKey>maracasCadence</exclusionKey>
+            <exclusionKey>maracasBase</exclusionKey>
+            <exclusionKey>maracasAllBushes</exclusionKey>
+            <exclusionKey>maracasAxbyOnly</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>darkFreddie</key>
+        <text>Defeat Dark Freddie</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>25</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>5mapItems</key>
+        <text>5 Overworld Mapping Items</text>
+        <tooltip>All of Cave / Treasure / Skull / Warp Charm and Telescope</tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>25</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>25stones</key>
+        <text>Activate 25 Sheikah Stones</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>25</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>allSeen</key>
+        <text>Full Map Seen</text>
+        <tooltip>You do not have to visit every tile, but the entire map must be visible.</tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>25</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>allExplored</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>eliShovel</key>
+        <text>Eli's Greatshovel</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>25</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>8keys</key>
+        <text>Hold 8 Keys</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>25</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>1000rupees</key>
+        <text>Hold 1000 Rupees</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>25</difficultyWeight>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>royalRapier</key>
+        <text>Royal Rapier</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>25</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>characterWeapons</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>caladbolg</key>
+        <text>Caladbolg</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>25</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>characterWeapons</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>keyArenas5</key>
+        <text>Fight 5 Key Arenas</text>
+        <tooltip>
+            You do not need to grab the keys if you don't want to.
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>25</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>keyArenas2</exclusionKey>
+            <exclusionKey>keyArenasHC</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>keyArenasHC</key>
+        <text>Fight All 3 Hyrule Castle Key Arenas</text>
+        <tooltip>
+            You do not need to grab the keys if you don't want to.
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>25</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>keyArenas2</exclusionKey>
+            <exclusionKey>keyArenas5</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>oboeAbxyOnly</key>
+        <text>Defeat Wizroboe using ONLY non-explosive A/B/X/Y items</text>
+        <tooltip>
+            Weapons, L/R abilities, bomb(chu)s, and bomb fairies are not allowed to hurt Wizroboe (equip a dagger to minimize accidental pokes; you may use forbidden weapons against wizrobes &amp; snowflakes)
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>25</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>oboe</exclusionKey>
+            <exclusionKey>oboeLink</exclusionKey>
+            <exclusionKey>oboeCadence</exclusionKey>
+            <exclusionKey>oboeNoBombs</exclusionKey>
+            <exclusionKey>oboeHonor</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>oboeHonor</key>
+        <text>Defeat Wizroboe "honorably"</text>
+        <tooltip>
+            Use ONLY a permanent (non-glass) weapon and your L/R abilities to defeat Wizroboe.
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>25</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>oboe</exclusionKey>
+            <exclusionKey>oboeLink</exclusionKey>
+            <exclusionKey>oboeCadence</exclusionKey>
+            <exclusionKey>oboeNoBombs</exclusionKey>
+            <exclusionKey>oboeAbxyOnly</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>bassNoBombs</key>
+        <text>Defeat Bass Guitarmos without using explosives</text>
+        <tooltip>
+            Bombs, Bombchus, Din's Fire, and Bomb Fairies are all banned.
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>25</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>bass</exclusionKey>
+            <exclusionKey>bassLink</exclusionKey>
+            <exclusionKey>bassCadence</exclusionKey>
+            <exclusionKey>bassBase</exclusionKey>
+            <exclusionKey>bassHonor</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>bassHonor</key>
+        <text>Defeat Bass Guitarmos "honorably"</text>
+        <tooltip>
+            Use ONLY a permanent (non-glass) weapon and your L/R abilities to defeat Bass Guitarmos.
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>25</difficultyWeight>
+        <exclusionKeys>
+            <exclusionKey>bass</exclusionKey>
+            <exclusionKey>bassLink</exclusionKey>
+            <exclusionKey>bassCadence</exclusionKey>
+            <exclusionKey>bassBase</exclusionKey>
+            <exclusionKey>bassNoBombs</exclusionKey>
+        </exclusionKeys>
+    </goal>
+
+    <!-- End Hard Goals -->
+    <!-- Begin Challenge Goals -->
+    
+    <goal>
+        <key>linkStart</key>
+        <text>Start as Link</text>
+        <tooltip>You can go to Zelda's room for a map peek, but you must still start as Link.</tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>6</difficultyWeight>
+        <isChallenge>true</isChallenge>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>noGlove</key>
+        <text>Don't get the Power Glove</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>6</difficultyWeight>
+        <isChallenge>true</isChallenge>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>noInfuse</key>
+        <text>Don't infuse any weapons</text>
+        <tooltip>The special daggers / shortswords can still be used.</tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>6</difficultyWeight>
+        <isChallenge>true</isChallenge>
+        <exclusionKeys>
+            <exclusionKey>infuse</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>noCadenceCaves</key>
+        <text>Don't visit any Cadence caves</text>
+        <tooltip>You can still get the lute from I AM ERROR or in the castle infusion room. You can enter the caves, but if you pick up the key item, you lose this square.</tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>6</difficultyWeight>
+        <isChallenge>true</isChallenge>
+        <exclusionKeys>
+            <exclusionKey>dinsFire</exclusionKey>
+            <exclusionKey>shieldTechnique</exclusionKey>
+            <exclusionKey>bassCadence</exclusionKey>
+            <exclusionKey>glockenspielCadence</exclusionKey>
+            <exclusionKey>oboeCadence</exclusionKey>
+            <exclusionKey>maracasCadence</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>noDungeonChests</key>
+        <text>Don't open any purple dungeon chests</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>6</difficultyWeight>
+        <isChallenge>true</isChallenge>
+        <exclusionKeys>
+            <exclusionKey>allItems</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>noBombs</key>
+        <text>Don't use any bombs</text>
+        <tooltip>
+            You can pick up bombs, but you cannot use them.  Bombchus and Din's Fire are allowed.
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>6</difficultyWeight>
+        <isChallenge>true</isChallenge>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>noDiamonds</key>
+        <text>Don't spend any diamonds</text>
+        <tooltip>
+            The diamond coupon can still be used.
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>6</difficultyWeight>
+        <isChallenge>true</isChallenge>
+        <exclusionKeys>
+            <exclusionKey>3bottles</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>noRupees</key>
+        <text>Don't spend any rupees</text>
+        <tooltip>
+            You can still steal and use coupons. If your rupee count ever decreases you lose this square.
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>6</difficultyWeight>
+        <isChallenge>true</isChallenge>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>saveFreddie</key>
+        <text>Don't kill any shopkeepers</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>6</difficultyWeight>
+        <isChallenge>true</isChallenge>
+        <exclusionKeys>
+            <exclusionKey>freddie</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>noHeartContainers</key>
+        <text>Don't pick up any heart containers</text>
+        <tooltip>
+            Heart pieces are allowed.
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>6</difficultyWeight>
+        <isChallenge>true</isChallenge>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>noFlippers</key>
+        <text>Don't get the Zora's Flippers</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>6</difficultyWeight>
+        <isChallenge>true</isChallenge>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>skipNayru</key>
+        <text>Skip Nayru's Love in Hyrule Castle</text>
+        <tooltip>
+            You can still pick up the shield (which includes Nayru's Love) at Link's house.
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <expirationVersion>1.1.1</expirationVersion>
+        <difficultyWeight>6</difficultyWeight>
+        <isChallenge>true</isChallenge>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>noDefense</key>
+        <text>Don't pick up an R-ability</text>
+        <tooltip>
+            Don't pick up Nayru's Love OR Link's Shield.
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>6</difficultyWeight>
+        <isChallenge>true</isChallenge>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>noMajorSkips</key>
+        <text>Skip Nayru's Love in Hyrule Castle</text>
+        <tooltip>
+            1F skips and boss key skips are banned. For each dungeon floor, you must enter through the entrance, kill the miniboss, and exit through the exit.  Gear skip is also banned.
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>6</difficultyWeight>
+        <isChallenge>true</isChallenge>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>noCastleWalls</key>
+        <text>Don't scale the castle walls</text>
+        <tooltip>
+            Do not use wall adventure around Hyrule Castle. This does not forbid the HC infusion (swimming) or other forms of wall adventures, or starting as Zelda.
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>6</difficultyWeight>
+        <isChallenge>true</isChallenge>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>noGlass</key>
+        <text>Don't use glass</text>
+        <tooltip>
+            This includes glass weapons, glass shovel, glass slippers, glass torch, AND glass ring
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.1.1</generatorVersion>
+        <difficultyWeight>6</difficultyWeight>
+        <isChallenge>true</isChallenge>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+
+    <!-- End Challenge goals -->
+    <!-- Begin Ending goals -->
+    
+    <goal>
+        <key>octavo</key>
+        <text>Defeat Octavo</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>20</difficultyWeight>
+        <isEnding>true</isEnding>
+        <exclusionKeys>
+            <exclusionKey>oboe</exclusionKey>
+            <exclusionKey>glockenspiel</exclusionKey>
+            <exclusionKey>maracas</exclusionKey>
+            <exclusionKey>bass</exclusionKey>
+            <exclusionKey>wakeLink</exclusionKey>
+            <exclusionKey>eliShovel</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>ganon</key>
+        <text>Defeat Ganon</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>20</difficultyWeight>
+        <isEnding>true</isEnding>
+        <exclusionKeys>
+            <exclusionKey>oboe</exclusionKey>
+            <exclusionKey>glockenspiel</exclusionKey>
+            <exclusionKey>maracas</exclusionKey>
+            <exclusionKey>bass</exclusionKey>
+            <exclusionKey>wakeLink</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>allExplored</key>
+        <text>Fully Explore the Map</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>20</difficultyWeight>
+        <isEnding>true</isEnding>
+        <exclusionKeys>
+            <exclusionKey>fourCorners</exclusionKey>
+            <exclusionKey>allSeen</exclusionKey>
+            <exclusionKey>caladbolg</exclusionKey>
+            <exclusionKey>royalRapier</exclusionKey>
+            <exclusionKey>darkFreddie</exclusionKey>
+            <exclusionKey>eliShovel</exclusionKey>
+            <exclusionKey>exploreBeach</exclusionKey>
+            <exclusionKey>exploreDesert</exclusionKey>
+            <exclusionKey>exploreSwamp</exclusionKey>
+            <exclusionKey>exploreMountains</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>yves</key>
+        <text>Unlock Yves</text>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>20</difficultyWeight>
+        <isEnding>true</isEnding>
+        <exclusionKeys>
+            <exclusionKey>5seeds</exclusionKey>
+            <exclusionKey>staminaUp</exclusionKey>
+            <exclusionKey>tinglePuzzle</exclusionKey>
+            <exclusionKey>caladbolg</exclusionKey>
+            <exclusionKey>royalRapier</exclusionKey>
+            <exclusionKey>darkFreddie</exclusionKey>
+            <exclusionKey>eliShovel</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>legendaryWeapons</key>
+        <text>All Four Future Hyrule Legendary Weapons</text>
+        <tooltip>
+            Hylian Flail, Fragarach, Impa's Nagintana, and Jeweled Dagger / Kokiri Sword are required.  The other legendary weapons are not required.
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>20</difficultyWeight>
+        <isEnding>true</isEnding>
+        <exclusionKeys>
+            <exclusionKey>oboe</exclusionKey>
+            <exclusionKey>glockenspiel</exclusionKey>
+            <exclusionKey>maracas</exclusionKey>
+            <exclusionKey>bass</exclusionKey>
+            <exclusionKey>wakeLink</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>characterWeapons</key>
+        <text>All Three Character-Specific Legendary Weapons</text>
+        <tooltip>
+            Royal Rapier, Caladbolg, and Eli's Greatshovel are all required.  The other legendary weapons are not required.
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>20</difficultyWeight>
+        <isEnding>true</isEnding>
+        <exclusionKeys>
+            <exclusionKey>oboe</exclusionKey>
+            <exclusionKey>glockenspiel</exclusionKey>
+            <exclusionKey>maracas</exclusionKey>
+            <exclusionKey>bass</exclusionKey>
+            <exclusionKey>wakeLink</exclusionKey>
+            <exclusionKey>caladbolg</exclusionKey>
+            <exclusionKey>royalRapier</exclusionKey>
+            <exclusionKey>eliShovel</exclusionKey>
+        </exclusionKeys>
+    </goal>
+    <goal>
+        <key>allWeapons</key>
+        <text>One Permanent Weapon of Each Type</text>
+        <tooltip>
+            Glass weapons do not count, but legendary weapons do.  You must have a shortsword, dagger, broadsword, spear, flail, longsword, rapier, and greatshovel.
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <!-- <expirationVersion></expirationVersion> -->
+        <difficultyWeight>20</difficultyWeight>
+        <isEnding>true</isEnding>
+        <!-- <exclusionKeys>
+            <exclusionKey></exclusionKey>
+        </exclusionKeys> -->
+    </goal>
+    <goal>
+        <key>allItems</key>
+        <text>All Permanent Usable Items</text>
+        <tooltip>
+            All permenent items and their respective upgrades, including L/R skills. Passive items and capacity upgrades are not required.
+        </tooltip>
+        <generatorType>BoI</generatorType>
+        <generatorVersion>1.0.2</generatorVersion>
+        <expirationVersion>1.1.1</expirationVersion>
+        <difficultyWeight>20</difficultyWeight>
+        <isEnding>true</isEnding>
+        <exclusionKeys>
+            <exclusionKey>noDungeonChests</exclusionKey>
+        </exclusionKeys>
+    </goal>
+</goals>

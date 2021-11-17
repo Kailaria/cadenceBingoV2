@@ -1,9 +1,15 @@
-import BingoGoalVersion from "./BingoGoalVersion";
+// import BingoGoalVersion from "./BingoGoalVersion";
 
 export default class BingoGoal {
     key!: string;
     text!: string;
     tooltip?: string;
-    currentVersion?: string;
-    versions!: Array<BingoGoalVersion>;
+    generatorType!: string;
+    generatorVersion!: string;
+    expirationVersion?: string;
+    difficultyWeight!: number;
+    isChallenge?: boolean = false;
+    isEnding?: boolean = false;
+    exclusionKeys?: Array<string>;
+    // synergyTags?: Array<string>;
 }
