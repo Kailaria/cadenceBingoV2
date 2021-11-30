@@ -1,5 +1,5 @@
 <template>
-    <div class="px-20 py-10">
+    <div>
         <div class="flex flex-row">
             <update-log-sidebar @select-update="onSelectUpdate"/>
             <update-log-details :displayedUpdateVersion="displayedUpdateVersion"/>
@@ -47,7 +47,7 @@ export default class UpdateLog extends Vue
     }
 
     get isUpdateLogLoaded() : boolean {
-        return UpdateLogsModule.isLoaded;
+        return UpdateLogsModule.isUpdateLogLoaded;
     }
 
     get displayedUpdate() : Update {
@@ -62,7 +62,7 @@ export default class UpdateLog extends Vue
     }
 
     get updateLog() : Array<Update> {
-        if (!UpdateLogsModule.isLoaded) {
+        if (!UpdateLogsModule.isUpdateLogLoaded) {
             return new Array<Update>();
         }
         return UpdateLogsModule.updates;

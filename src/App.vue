@@ -2,15 +2,16 @@
   <div id="nav" class="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/bingo-generator">Bingo Generator</router-link> |
+    <router-link to="/goals-library">Goals Library</router-link> |
     <router-link :to="{name: 'Update Log'}">Updates</router-link> |
     <router-link to="/about">About</router-link>
   </div>
-  <router-view/>
+  <router-view class="px-20 py-10"/>
 </template>
 
 <style lang="postcss">
 #app {
-  @apply min-h-screen bg-gradient-to-b from-blue-300 via-gray-300 to-green-300 font-sans
+  @apply min-h-screen bg-fixed bg-gradient-to-b from-blue-300 via-gray-300 to-green-300 font-sans
     text-left text-blueGray-800 antialiased;
 }
 

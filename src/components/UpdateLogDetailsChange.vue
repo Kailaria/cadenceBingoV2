@@ -60,11 +60,11 @@ export default class UpdateLogDetails extends Vue.with(Props) {
     }
 
     get isUpdateLogLoaded() : boolean {
-        return UpdateLogsModule.isLoaded;
+        return UpdateLogsModule.isUpdateLogLoaded;
     }
 
     get updateLog() : Array<Update> {
-        if (!UpdateLogsModule.isLoaded) {
+        if (!UpdateLogsModule.isUpdateLogLoaded) {
             return new Array<Update>();
         }
         return UpdateLogsModule.updates;

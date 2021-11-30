@@ -12,7 +12,7 @@ import * as common from '@/static/UpdateLogCommon';
 class UpdateLogsModule extends VuexModule {
     updates: Array<Update> = new Array<Update>();
     
-    get isLoaded(): boolean {
+    get isUpdateLogLoaded(): boolean {
         return this.updates.length >= common.updateFileNames.length;
     }
 

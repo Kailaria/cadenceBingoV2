@@ -65,7 +65,7 @@ export default class UpdateLogSidebar extends Vue
     }
 
     get isUpdateLogLoaded() : boolean {
-        return UpdateLogsModule.isLoaded;
+        return UpdateLogsModule.isUpdateLogLoaded;
     }
 
     get updateLog() : Array<Update> {

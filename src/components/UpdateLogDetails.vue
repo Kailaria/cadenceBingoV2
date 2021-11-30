@@ -57,7 +57,7 @@ export default class UpdateLogDetails extends Vue {
     }
 
     get isUpdateLogLoaded() : boolean {
-        return UpdateLogsModule.isLoaded;
+        return UpdateLogsModule.isUpdateLogLoaded;
     }
 
     get displayedUpdate() : Update {
@@ -74,7 +74,7 @@ export default class UpdateLogDetails extends Vue {
     }
 
     get updateLog() : Array<Update> {
-        if (!UpdateLogsModule.isLoaded) {
+        if (!UpdateLogsModule.isUpdateLogLoaded) {
             return new Array<Update>();
         }
         return UpdateLogsModule.updates;
