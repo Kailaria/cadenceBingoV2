@@ -47,6 +47,8 @@ import BingoGoal from '@/models/BingoGoal';
 })
 export default class GoalsLibrary extends Vue
 {
+    // Change to use a view-level library for sorting/pagination?
+    // localLibrary: Array<BingoGoal>
     constructor(obj: any) {
         super(obj);
     }

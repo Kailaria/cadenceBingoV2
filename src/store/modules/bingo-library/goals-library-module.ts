@@ -35,13 +35,6 @@ class GoalsLibraryModule extends VuexModule {
             });
     }
 
-    // @Mutation
-    // sort() {
-    //     return (...args : any[]) => {
-            
-    //     };
-    // }
-
     @MutationAction
     async initGoalsLibrary() {
         const parser = require('fast-xml-parser');
