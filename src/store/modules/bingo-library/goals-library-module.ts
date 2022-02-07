@@ -24,8 +24,9 @@ class GoalsLibraryModule extends VuexModule {
     get filterByGeneratorVersion() {
         return (generatorName: string, generatorVersion: string) => 
             this.bingoGoals.filter(goal => {
+                // Include goal if its version equals or precedes the requested version.
                 let includeGoal = goal.generatorType === generatorName &&
-                    goal.generatorVersion >= generatorVersion;
+                    goal.generatorVersion <= generatorVersion;
                 // If the goal currently would be included but there's an expiration version, only
                 //   include it if generatorVersion requested is strictly before its expirationVersion.
                 if (includeGoal && goal.expirationVersion !== undefined) {
