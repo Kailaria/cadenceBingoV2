@@ -9,8 +9,7 @@ export default class BingoGeneratorService {
      * Generates a bingo board based on the options sent in. This the the main entry point,
      * use it over any of the specific generator calls.
      */
-    async generateBingoBoard(options: GeneratorOptions) {
-        await GoalsLibraryModule.initGoalsLibrary();
+    generateBingoBoard(options: GeneratorOptions) {
         BingoBoardModule.clearBingoBoardGoals();
         BingoBoardModule.setGeneratorOptions(options);
         BingoBoardModule.setSeed();
@@ -49,7 +48,7 @@ export default class BingoGeneratorService {
         for (let i = 0; i < populationOrder.length; i++) {
             let index = populationOrder[i];
             // Add the goal to the population order's next index
-            BingoBoardModule.addBingoBoardGoal(boardGoalsDeck[boardDeckIndex], index);
+            BingoBoardModule.addBingoBoardGoal({goal: boardGoalsDeck[boardDeckIndex], tileNum: index});
             boardDeckIndex++;
         }
     }

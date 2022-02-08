@@ -53,7 +53,7 @@ class BingoBoardModule extends VuexModule {
     @Mutation
     setSeed() {
         let textSeed = this.generatorOptions.textSeed;
-        if (textSeed === undefined || textSeed.trim().length > 0) {
+        if (textSeed === undefined || textSeed.trim().length === 0) {
             textSeed = Math.ceil(Math.random() * 9999999999).toString();
             this.generatorOptions.textSeed = textSeed;
         }
@@ -77,9 +77,9 @@ class BingoBoardModule extends VuexModule {
     }
 
     @Mutation
-    addBingoBoardGoal(goal: BingoGoal, tileNum: number) {
-        let tile = new BingoTile(goal);
-        this.bingoBoard[tileNum] = tile;
+    addBingoBoardGoal(payload: {goal: BingoGoal, tileNum: number}) {
+        let tile = new BingoTile(payload.goal);
+        this.bingoBoard[payload.tileNum] = tile;
     }
 
 }
