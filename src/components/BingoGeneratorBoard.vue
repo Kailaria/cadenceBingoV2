@@ -1,4 +1,3 @@
-<!--TODO: Copy(?) the bingo board over to this Single-file component -->
 <template>
     <div>
         <div>
@@ -34,19 +33,23 @@
 <script lang="ts">
 import {Options, Vue} from 'vue-class-component';
 import BingoBoardModule from '@/store/modules/bingo-board/bingo-board-module';
-import GoalsLibraryModule from '@/store/modules/bingo-library/goals-library-module';
 import BingoTile from '@/models/BingoTile';
-import GeneratorOptions from '@/models/GeneratorOptions';
-import BingoGeneratorService from '@/services/BingoGeneratorService';
 import BingoGoal from '@/models/BingoGoal';
 
 @Options({
     components: {
+    },
+    props: {
+        textSeed: String
+    },
+    watch: {
+        textSeed(val) {
+            this.loadBingoBoard(val);
+        }
     }
 })
-export default class BingoBoard extends Vue
-{
-    //TODO: Get localized version of the board for reactivity
+export default class BingoGeneratorBoard extends Vue {
+    propTextSeed: string = '';
     columnHeaders: Array<string> = ['tl-br','col1','col2','col3','col4','col5'];
     colIndexes: Array<number> = [0,1,2,3,4];
     dataRows: Array<{header: string, data: Array<BingoTile>}> = [
@@ -59,27 +62,23 @@ export default class BingoBoard extends Vue
     blTrHeader: string = 'bl-tr';
     endGoal: BingoTile = new BingoTile(new BingoGoal());
 
-    generatorService = new BingoGeneratorService();
-
     constructor(obj: any) {
         super(obj);
-        let me = this;
-        let options: GeneratorOptions = new GeneratorOptions('BoI','1.1.1');
-        options.textSeed = '1';
-        options.enableDifficultyRandomness = true;
-        GoalsLibraryModule.initGoalsLibrary().then(
-            () => {
-                me.generatorService.generateBingoBoard(options);
-                let storeIndex = 0;
-                for (let row in me.dataRows) {
-                    for (let col in me.colIndexes) {
-                        me.dataRows[row].data[col] = BingoBoardModule.bingoBoard[storeIndex];
-                        storeIndex++;
-                    }
-                }
-                me.endGoal = BingoBoardModule.endGoal;
+        if (BingoBoardModule.isBingoBoardLoaded) {
+            this.loadBingoBoard(this.propTextSeed);
+        }
+    }
+
+    loadBingoBoard(textSeed: string) {
+        this.propTextSeed = textSeed;
+        let storeIndex = 0;
+        for (let row in this.dataRows) {
+            for (let col in this.colIndexes) {
+                this.dataRows[row].data[col] = BingoBoardModule.bingoBoard[storeIndex];
+                storeIndex++;
             }
-        );
+        }
+        this.endGoal = BingoBoardModule.endGoal;
     }
 
     get isBingoBoardLoaded() : boolean {
@@ -135,35 +134,5 @@ export default class BingoBoard extends Vue
         }
         return label;
     }
-
-    difficultyLabel(bingoTile: BingoTile) : string {
-        let label = "" + bingoTile.difficulty;
-        if (bingoTile.goal.generatorType === "BoI") {
-            switch (bingoTile.difficulty) {
-                case 5:
-                    label = "Easy";
-                    break;
-                case 15:
-                    label = "Medium";
-                    break;
-                case 25:
-                    label = "Hard";
-                    break;
-                case 6:
-                    label = "Challenge";
-                    break;
-                case 20:
-                    label = "Ending";
-                    break;
-                default:
-                    label = "N/A"
-                    break;
-            }
-        }
-        return label;
-    }
 }
 </script>
-<style lang="postcss" scoped>
-
-</style>

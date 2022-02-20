@@ -26,7 +26,15 @@ class BingoBoardModule extends VuexModule {
 
     // getters
     get isBingoBoardLoaded(): boolean {
-        return this.bingoBoard.every(tile => tile !== undefined && tile.goal !== undefined);
+        let retVal = true;
+        for (let i = 0; i < 25; i++) {
+            let tile = this.bingoBoard[i];
+            if (tile === undefined || tile.goal === undefined) {
+                retVal = false;
+                break;
+            }
+        }
+        return retVal;
     }
 
     get getBingoTile() {
