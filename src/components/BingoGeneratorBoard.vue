@@ -1,26 +1,32 @@
 <template>
     <div>
-        <div>
-            {{ endingTile.goal.text }}
-        </div>
+        <bingo-generator-board-tile 
+            :textSeed="textSeed"
+            :isGoal="true"
+            class="w-full"/>
         <table>
             <thead>
                 <th 
                     v-for="header in columnHeaders"
-                    :key="header">
+                    :key="header"
+                    class="text-center">
                     {{ header }}
                 </th>
             </thead>
             <tbody>
                 <tr
-                    v-for="row in dataRows"
+                    v-for="(row, rowIndex) in dataRows"
                     :key="row.header">
-                    <th>{{ row.header }}</th>
-                    <td 
+                    <th class="text-center">
+                        {{ row.header }}
+                    </th>
+                    <bingo-generator-board-tile 
                         v-for="(bingoTile, colIndex) in row.data"
-                        :key="colIndex">
-                        {{ textForTile(bingoTile) }}
-                    </td>
+                        :key="'row' + rowIndex + 'col' + colIndex"
+                        :textSeed="textSeed"
+                        :isGoal="false"
+                        :row="rowIndex"
+                        :col="colIndex"/>
                 </tr>
                 <tr>
                     <th>{{ blTrHeader }}</th>
@@ -35,9 +41,11 @@ import {Options, Vue} from 'vue-class-component';
 import BingoBoardModule from '@/store/modules/bingo-board/bingo-board-module';
 import BingoTile from '@/models/BingoTile';
 import BingoGoal from '@/models/BingoGoal';
+import BingoGeneratorBoardTile from '@/components/BingoGeneratorBoardTile.vue';
 
 @Options({
     components: {
+        BingoGeneratorBoardTile
     },
     props: {
         textSeed: String
@@ -136,3 +144,7 @@ export default class BingoGeneratorBoard extends Vue {
     }
 }
 </script>
+
+<style lang="postcss" scoped>
+
+</style>

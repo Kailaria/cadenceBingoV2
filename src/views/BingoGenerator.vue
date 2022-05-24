@@ -1,6 +1,7 @@
 <template>
     <div>
-        <bingo-generator-board :textSeed="generatorOptions.textSeed"/>
+        <bingo-generator-board v-if="isBingoBoardLoaded"
+        :textSeed="generatorOptions.textSeed"/>
     </div>
 </template>
 

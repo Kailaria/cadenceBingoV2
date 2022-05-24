@@ -70,7 +70,7 @@ export default class UpdateLog extends Vue
 }
 </script>
 
-<style scoped>
+<style lang="postcss" scoped>
 a.update-sidebar-item {
     cursor: pointer;
 }
