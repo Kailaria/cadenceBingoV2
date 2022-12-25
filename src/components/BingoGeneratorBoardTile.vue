@@ -22,27 +22,43 @@ import BingoGoal from '@/models/BingoGoal';
         col: Number,
         isGoal: Boolean
     },
-    // watch: {
-    // }
+    watch: {
+        textSeed(val) {
+            this.textSeed = val;
+            this.loadBingoBoardTile(this.isGoal, this.row, this.col);
+        }
+    }
 })
 export default class BingoGeneratorBoardTile extends Vue {
     textSeed: string;
-    endGoal: boolean = false;
+    isGoal: boolean = false;
     localTile: BingoTile;
+    row: number;
+    col: number;
 
+    /**
+     * 
+     * @param obj - Contains all the props
+     */
     constructor(obj: any) {
         super(obj);
         let goal = new BingoGoal();
         this.localTile = new BingoTile(goal);
-        this.textSeed = '';
+        this.isGoal = obj.isGoal;
+        this.textSeed = obj.textSeed;
+        this.row = obj.row;
+        this.col = obj.col;
+        this.loadBingoBoardTile(this.isGoal, this.row, this.col);
     }
 
     loadBingoBoardTile(isGoal: boolean, row: number, col: number) {
         // this.textSeed = val;
+        this.isGoal = isGoal
         if (isGoal) {
             this.localTile = BingoBoardModule.endGoal;
-            this.endGoal = true;
         } else {
+            this.row = row;
+            this.col = col;
             this.localTile = BingoBoardModule.getBingoTile(row, col);
         }
     }
@@ -93,6 +109,6 @@ export default class BingoGeneratorBoardTile extends Vue {
 
 <style lang="postcss" scoped>
     .tile {
-        @apply text-center
+        @apply text-center p-2 bg-gray-300 bg-opacity-75 border
     }
 </style>

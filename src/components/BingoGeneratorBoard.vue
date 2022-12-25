@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <div class="bingoboard">
         <bingo-generator-board-tile 
-            :textSeed="textSeed"
+            :textSeed="propTextSeed"
             :isGoal="true"
             class="w-full"/>
         <table>
@@ -9,7 +9,7 @@
                 <th 
                     v-for="header in columnHeaders"
                     :key="header"
-                    class="text-center">
+                    class="text-center border-l border-r">
                     {{ header }}
                 </th>
             </thead>
@@ -17,19 +17,19 @@
                 <tr
                     v-for="(row, rowIndex) in dataRows"
                     :key="row.header">
-                    <th class="text-center">
+                    <th class="text-center border-t border-b">
                         {{ row.header }}
                     </th>
                     <bingo-generator-board-tile 
-                        v-for="(bingoTile, colIndex) in row.data"
-                        :key="'row' + rowIndex + 'col' + colIndex"
-                        :textSeed="textSeed"
+                        v-for="(cellId, colIndex) in row.cellIds"
+                        :key="cellId"
+                        :textSeed="propTextSeed"
                         :isGoal="false"
                         :row="rowIndex"
                         :col="colIndex"/>
                 </tr>
                 <tr>
-                    <th>{{ blTrHeader }}</th>
+                    <th class="border-l border-r">{{ blTrHeader }}</th>
                 </tr>
             </tbody>
         </table>
@@ -60,12 +60,12 @@ export default class BingoGeneratorBoard extends Vue {
     propTextSeed: string = '';
     columnHeaders: Array<string> = ['tl-br','col1','col2','col3','col4','col5'];
     colIndexes: Array<number> = [0,1,2,3,4];
-    dataRows: Array<{header: string, data: Array<BingoTile>}> = [
-        {header: 'row1', data: new Array<BingoTile>(5)},
-        {header: 'row2', data: new Array<BingoTile>(5)},
-        {header: 'row3', data: new Array<BingoTile>(5)},
-        {header: 'row4', data: new Array<BingoTile>(5)},
-        {header: 'row5', data: new Array<BingoTile>(5)}
+    dataRows: Array<{header: string, cellIds: Array<string>}> = [
+        {header: 'row1', cellIds: new Array<string>(5)},
+        {header: 'row2', cellIds: new Array<string>(5)},
+        {header: 'row3', cellIds: new Array<string>(5)},
+        {header: 'row4', cellIds: new Array<string>(5)},
+        {header: 'row5', cellIds: new Array<string>(5)}
     ];
     blTrHeader: string = 'bl-tr';
     endGoal: BingoTile = new BingoTile(new BingoGoal());
@@ -79,11 +79,10 @@ export default class BingoGeneratorBoard extends Vue {
 
     loadBingoBoard(textSeed: string) {
         this.propTextSeed = textSeed;
-        let storeIndex = 0;
+        // let storeIndex = 0;
         for (let row in this.dataRows) {
             for (let col in this.colIndexes) {
-                this.dataRows[row].data[col] = BingoBoardModule.bingoBoard[storeIndex];
-                storeIndex++;
+                this.dataRows[row].cellIds[col] = 'row' + row + 'col' + col;
             }
         }
         this.endGoal = BingoBoardModule.endGoal;
@@ -146,5 +145,7 @@ export default class BingoGeneratorBoard extends Vue {
 </script>
 
 <style lang="postcss" scoped>
-
+    .bingoboard {
+        @apply bg-gray-700 bg-opacity-75
+    }
 </style>
