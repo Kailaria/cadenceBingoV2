@@ -1,8 +1,27 @@
 <template>
-    <div v-if="isGoal" class="tile">
+    <div 
+        v-if="isGoal"
+        class="tile w-full"
+        :class="{
+            'statusNotDone': isStatusNotDone(localTile.status),
+            'statusPlanYes': isStatusPlanYes(localTile.status),
+            'statusDone': isStatusDone(localTile.status)
+        }"
+        @click="cycleStatus($event)"
+    >
         <span>{{ textForTile(textSeed, isGoal, row, col) }}</span>
     </div>
-    <td v-if="!isGoal" class="tile">
+    <td 
+        v-if="!isGoal" 
+        class="tile"
+        :class="{
+            'statusNotDone': isStatusNotDone(localTile.status),
+            'statusPlanNo': isStatusPlanNo(localTile.status),
+            'statusPlanYes': isStatusPlanYes(localTile.status),
+            'statusDone': isStatusDone(localTile.status)
+        }"
+        @click="cycleStatus($event)"
+    >
         <span>{{ textForTile(textSeed, isGoal, row, col) }}</span>
     </td>
 </template>
@@ -12,6 +31,7 @@ import {Options, Vue} from 'vue-class-component';
 import BingoBoardModule from '@/store/modules/bingo-board/bingo-board-module';
 import BingoTile from '@/models/BingoTile';
 import BingoGoal from '@/models/BingoGoal';
+import BingoTileStatus from '@/models/BingoTileStatus';
 
 @Options({
     components: {
@@ -25,7 +45,7 @@ import BingoGoal from '@/models/BingoGoal';
     watch: {
         textSeed(val) {
             this.textSeed = val;
-            this.loadBingoBoardTile(this.isGoal, this.row, this.col);
+            // this.loadBingoBoardTile(this.isGoal, this.row, this.col);
         }
     }
 })
@@ -33,6 +53,7 @@ export default class BingoGeneratorBoardTile extends Vue {
     textSeed: string;
     isGoal: boolean = false;
     localTile: BingoTile;
+    // localStatus: BingoTileStatus;
     row: number;
     col: number;
 
@@ -44,11 +65,12 @@ export default class BingoGeneratorBoardTile extends Vue {
         super(obj);
         let goal = new BingoGoal();
         this.localTile = new BingoTile(goal);
+        // this.localStatus = this.localTile.status;
         this.isGoal = obj.isGoal;
         this.textSeed = obj.textSeed;
         this.row = obj.row;
         this.col = obj.col;
-        this.loadBingoBoardTile(this.isGoal, this.row, this.col);
+        // this.loadBingoBoardTile(this.isGoal, this.row, this.col);
     }
 
     loadBingoBoardTile(isGoal: boolean, row: number, col: number) {
@@ -74,8 +96,32 @@ export default class BingoGeneratorBoardTile extends Vue {
         return this.localTile.goal.text;
     }
 
-    statusForTile(bingoTile: BingoTile) : string {
+    statusTextForTile(bingoTile: BingoTile) : string {
         return bingoTile.status.status;
+    }
+
+    isStatusNotDone(status: BingoTileStatus) : boolean {
+        return status.status === BingoTileStatus.NotDone.status;
+    }
+
+    isStatusPlanYes(status: BingoTileStatus) : boolean {
+        return status.status === BingoTileStatus.PlanYes.status;
+    }
+
+    isStatusPlanNo(status: BingoTileStatus) : boolean {
+        return status.status === BingoTileStatus.PlanNo.status;
+    }
+
+    isStatusDone(status: BingoTileStatus) : boolean {
+        return status.status === BingoTileStatus.Done.status;
+    }
+
+    cycleStatus(mouseEvent: MouseEvent) {
+        if (!mouseEvent.shiftKey) {
+            this.localTile.status = BingoTileStatus.nextStatus(this.localTile.status, this.isGoal);
+        } else { // mouseEvent.shiftKey === true
+            this.localTile.status = BingoTileStatus.prevStatus(this.localTile.status, this.isGoal);
+        }
     }
 
     difficultyForTile(bingoTile: BingoTile) : string {
@@ -109,6 +155,22 @@ export default class BingoGeneratorBoardTile extends Vue {
 
 <style lang="postcss" scoped>
     .tile {
-        @apply text-center p-2 bg-gray-300 bg-opacity-75 border
+        @apply text-center p-2 bg-opacity-75 border cursor-pointer
+    }
+
+    .statusNotDone {
+        @apply bg-blueGray-500 bg-opacity-75
+    }
+
+    .statusPlanNo {
+        @apply bg-red-800 bg-opacity-75
+    }
+
+    .statusPlanYes {
+        @apply bg-yellow-400 bg-opacity-75 text-blueGray-900
+    }
+
+    .statusDone {
+        @apply bg-green-200 bg-opacity-75 text-blueGray-900
     }
 </style>
