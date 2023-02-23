@@ -8,8 +8,8 @@ export default class BingoGoal {
     generatorVersion!: string;
     expirationVersion?: string;
     difficultyWeight!: number;
-    isChallenge?: boolean = false;
-    isEnding?: boolean = false;
+    isChallenge!: boolean;
+    isEnding!: boolean;
     exclusionKeys?: Array<string>;
     // synergyTags?: Array<string>;
 

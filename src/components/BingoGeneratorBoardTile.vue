@@ -8,6 +8,7 @@
             'statusDone': isStatusDone(localTile.status)
         }"
         @click="cycleStatus($event)"
+        :title="titleForTile(textSeed)"
     >
         <span>{{ textForTile(textSeed, isGoal, row, col) }}</span>
     </div>
@@ -21,6 +22,7 @@
             'statusDone': isStatusDone(localTile.status)
         }"
         @click="cycleStatus($event)"
+        :title="titleForTile(textSeed)"
     >
         <span>{{ textForTile(textSeed, isGoal, row, col) }}</span>
     </td>
@@ -94,6 +96,14 @@ export default class BingoGeneratorBoardTile extends Vue {
             this.loadBingoBoardTile(isGoal, row, col);
         }
         return this.localTile.goal.text;
+    }
+
+    titleForTile(textSeed: string) : string | undefined {
+        if (this.textSeed !== textSeed
+            || this.textSeed.trim() === '') {
+            this.loadBingoBoardTile(this.isGoal, this.row, this.col);
+        }
+        return this.localTile.goal.tooltip;
     }
 
     statusTextForTile(bingoTile: BingoTile) : string {

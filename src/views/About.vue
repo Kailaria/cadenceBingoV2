@@ -23,3 +23,9 @@
         here</a>.</p>
   </div>
 </template>
+
+<style lang="postcss" scoped>
+  a {
+    @apply underline
+  }
+</style>
