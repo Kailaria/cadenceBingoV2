@@ -24,7 +24,7 @@ const routes: Array<RouteRecordRaw> = [
     component: UpdateLog
   },
   {
-    path: '/bingo-generator',
+    path: '/bingo-generator/:seed?',
     name: 'Bingo Generator',
     component: BingoGenerator
   },

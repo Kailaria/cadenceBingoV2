@@ -1,7 +1,10 @@
 <template>
     <div>
+        <generate-new-board expandedOptions="true" />
+            <!-- @update-text-seed=""/> -->
         <bingo-generator-board v-if="isBingoBoardLoaded"
-        :textSeed="generatorOptions.textSeed"/>
+            :textSeed="generatorOptions.textSeed"/>
+        <bingo-generator-usage/>
     </div>
 </template>
 
@@ -14,10 +17,14 @@ import GeneratorOptions from '@/models/GeneratorOptions';
 import BingoGeneratorService from '@/services/BingoGeneratorService';
 // import BingoGoal from '@/models/BingoGoal';
 import BingoGeneratorBoard from '@/components/BingoGeneratorBoard.vue';
+import BingoGeneratorUsage from '@/components/BingoGeneratorUsage.vue';
+import GenerateNewBoard from '@/components/GenerateNewBoard.vue';
 
 @Options({
     components: {
-        BingoGeneratorBoard
+        BingoGeneratorBoard,
+        BingoGeneratorUsage,
+        GenerateNewBoard
     }
 })
 export default class BingoGenerator extends Vue
@@ -52,6 +59,8 @@ export default class BingoGenerator extends Vue
     get isBingoBoardLoaded() : boolean {
         return BingoBoardModule.isBingoBoardLoaded;
     }
+
+    // updateTextSeed()
 }
 </script>
 <style lang="postcss" scoped>

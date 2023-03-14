@@ -1,0 +1,27 @@
+<template>
+    <ul>
+        <li>Hover over a goal when you want an explanation about that goal.</li>
+        <li>Click on a goal to advance forward.</li>
+        <li>Shift-Click on a goal to advance backward.</li>
+        <li>
+            <span>Goal coloration and order:</span>
+            <ul>
+                <li>Red: "Not going to complete" or "Failed challenge"</li>
+                <li>Gray: "Not Done"</li>
+                <li>Yellow: "Planning to complete" or "In Progress"</li>
+                <li>Green: "Done!"</li>
+            </ul>
+        </li>
+    </ul>
+</template>
+
+<script lang="ts">
+import {Vue} from 'vue-class-component';
+export default class BingoGeneratorUsage extends Vue {
+    
+}
+</script>
+
+<style lang="postcss" scoped>
+
+</style>
