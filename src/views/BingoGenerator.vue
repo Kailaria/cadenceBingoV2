@@ -1,7 +1,7 @@
 <template>
     <div>
-        <generate-new-board expandedOptions="true" />
-            <!-- @update-text-seed=""/> -->
+        <generate-new-board :expandableOptions="true" 
+            @generate="onGenerate"/>
         <bingo-generator-board v-if="isBingoBoardLoaded"
             :textSeed="generatorOptions.textSeed"/>
         <bingo-generator-usage/>
@@ -60,7 +60,10 @@ export default class BingoGenerator extends Vue
         return BingoBoardModule.isBingoBoardLoaded;
     }
 
-    // updateTextSeed()
+    onGenerate(options: GeneratorOptions) {
+        this.generatorOptions = options;
+        this.generatorService.generateBingoBoard(this.generatorOptions);
+    }
 }
 </script>
 <style lang="postcss" scoped>

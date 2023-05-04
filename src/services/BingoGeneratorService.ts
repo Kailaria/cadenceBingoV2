@@ -15,7 +15,7 @@ export default class BingoGeneratorService {
         BingoBoardModule.setSeed();
 
         let seedRandom = require('seedrandom');
-        let rng = seedRandom(BingoBoardModule.generatorOptions.textSeed);
+        let rng = seedRandom(options.textSeed);
         let genType = options.generatorType;
         let genVersion = options.generatorVersion;
         if (options.enableDifficultyRandomness) {

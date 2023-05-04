@@ -8,9 +8,9 @@
             'statusDone': isStatusDone(localTile.status)
         }"
         @click="cycleStatus($event)"
-        :title="titleForTile(textSeed)"
+        :title="titleForTile(propTextSeed)"
     >
-        <span>{{ textForTile(textSeed, isGoal, row, col) }}</span>
+        <span>{{ textForTile(propTextSeed, isGoal, row, col) }}</span>
     </div>
     <td 
         v-if="!isGoal" 
@@ -22,9 +22,9 @@
             'statusDone': isStatusDone(localTile.status)
         }"
         @click="cycleStatus($event)"
-        :title="titleForTile(textSeed)"
+        :title="titleForTile(propTextSeed)"
     >
-        <span>{{ textForTile(textSeed, isGoal, row, col) }}</span>
+        <span>{{ textForTile(propTextSeed, isGoal, row, col) }}</span>
     </td>
 </template>
 
@@ -46,18 +46,25 @@ import BingoTileStatus from '@/models/BingoTileStatus';
     },
     watch: {
         textSeed(val) {
-            this.textSeed = val;
+            this.propTextSeed = val;
+            this.isTextDirty = true;
+            this.isTitleDirty = true;
             // this.loadBingoBoardTile(this.isGoal, this.row, this.col);
         }
     }
 })
 export default class BingoGeneratorBoardTile extends Vue {
-    textSeed: string;
+    // propTextSeed - Store the prop in a differently-named attribute and always reference this
+    //    instead of the prop unless the prop will remain static.
+    propTextSeed: string;
+    localSeed: string;
     isGoal: boolean = false;
     localTile: BingoTile;
     // localStatus: BingoTileStatus;
     row: number;
     col: number;
+    isTextDirty: boolean;
+    isTitleDirty: boolean;
 
     /**
      * 
@@ -69,7 +76,10 @@ export default class BingoGeneratorBoardTile extends Vue {
         this.localTile = new BingoTile(goal);
         // this.localStatus = this.localTile.status;
         this.isGoal = obj.isGoal;
-        this.textSeed = obj.textSeed;
+        this.propTextSeed = obj.textSeed;
+        this.localSeed = obj.textSeed;
+        this.isTextDirty = false;
+        this.isTitleDirty = false;
         this.row = obj.row;
         this.col = obj.col;
         // this.loadBingoBoardTile(this.isGoal, this.row, this.col);
@@ -88,22 +98,32 @@ export default class BingoGeneratorBoardTile extends Vue {
     }
 
     textForTile(textSeed: string, isGoal: boolean, row: number, col: number) : string {
-        if (this.textSeed !== textSeed 
-            || this.textSeed.trim() === ''
+        if ((this.localSeed !== textSeed && this.isTextDirty === true) 
+            || this.localSeed.trim() === ''
             || this.localTile === undefined 
             || this.localTile.goal === undefined
             || this.localTile.goal.text === undefined) {
             this.loadBingoBoardTile(isGoal, row, col);
+            this.isTextDirty = false;
         }
+        this.updateLocalSeed();
         return this.localTile.goal.text;
     }
 
     titleForTile(textSeed: string) : string | undefined {
-        if (this.textSeed !== textSeed
-            || this.textSeed.trim() === '') {
+        if ((this.localSeed !== textSeed && this.isTitleDirty === true)
+            || this.localSeed.trim() === '') {
             this.loadBingoBoardTile(this.isGoal, this.row, this.col);
+            this.isTitleDirty = false;
         }
+        this.updateLocalSeed();
         return this.localTile.goal.tooltip;
+    }
+
+    updateLocalSeed() {
+        if (this.isTextDirty === false && this.isTitleDirty === false) {
+            this.localSeed = this.propTextSeed;
+        }
     }
 
     statusTextForTile(bingoTile: BingoTile) : string {

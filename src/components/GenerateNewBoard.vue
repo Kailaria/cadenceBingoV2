@@ -1,12 +1,13 @@
 <template>
     <div
         id="generateNew-container"
+        class="pb-1"
     >
         <label for="newSeed">Seed: </label>
         <input v-model="newSeed" type="text">
-        <button @click="updateTextSeed()">Generate</button>
+        <button @click="generate()" class="ml-2">Generate</button>
+        <div class="float-right">Current Seed: {{ currentSeed }}</div>
     </div>
-    <div>Current Seed: {{ currentSeed }}</div>
     <div v-if="areOptionsExpanded">
         options expanded :3
     </div>
@@ -23,7 +24,7 @@ import GeneratorOptions from '@/models/GeneratorOptions';
         expandableOptions: Boolean,
     },
     emits: [
-        'updateTextSeed'
+        'generate'
     ]
 })
 export default class GenerateNewBoard extends Vue
@@ -33,9 +34,16 @@ export default class GenerateNewBoard extends Vue
     expandableOptions!: boolean;
     expandOptions!: boolean;
 
-    mounted() {
+    constructor(obj: any) {
+        super(obj);
+
+        this.newSeed = "";
+        this.expandableOptions = obj.expandableOptions;
         this.expandOptions = false;
+
         this.generatorOptions = new GeneratorOptions('BoI', '1.1.1');
+        this.generatorOptions.textSeed = '1';
+        this.generatorOptions.enableDifficultyRandomness = true;
     }
 
     get areOptionsExpanded() : boolean {
@@ -50,9 +58,11 @@ export default class GenerateNewBoard extends Vue
         return seed;
     }
 
-    // Emits the updated text seed so that the parent component can load the 
-    updateTextSeed() {
-        this.$emit('updateTextSeed', this.newSeed);
+    // Emits the generator options
+    generate() {
+        this.generatorOptions.textSeed = this.newSeed;
+        this.$emit('generate', this.generatorOptions);
+        this.newSeed = "";
     }
 }
 </script>
