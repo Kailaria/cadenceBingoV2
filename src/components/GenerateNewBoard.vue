@@ -3,10 +3,10 @@
         id="generateNew-container"
         class="pb-1"
     >
-        <label for="newSeed">Seed: </label>
+        <label for="newSeed" class="font-bold">Seed: </label>
         <input v-model="newSeed" type="text">
-        <button @click="generate()" class="ml-2">Generate</button>
-        <div class="float-right">Current Seed: {{ currentSeed }}</div>
+        <button @click="generate()" class="btn primary">Generate</button>
+        <div class="float-right"><b>Current Seed:</b> {{ currentSeed }}</div>
     </div>
     <div v-if="areOptionsExpanded">
         options expanded :3

@@ -18,7 +18,8 @@ module.exports = {
       orange: colors.orange,
       blue: colors.blue,
       green: colors.green,
-      blueGray: colors.blueGray
+      blueGray: colors.blueGray,
+      lime: colors.lime
     },
     fontFamily: {
       'sans': ['Avenir', 'Helvetica', 'Arial', 'sans-serif']
@@ -26,6 +27,7 @@ module.exports = {
     extend: {},
   },
   variants: {
+    backgroundColor: ['responsive','hover','focus','active'],
     extend: {},
   },
   plugins: [],

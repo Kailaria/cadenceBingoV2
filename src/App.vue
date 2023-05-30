@@ -26,4 +26,16 @@
 #nav a.router-link-active {
   @apply text-orange-400;
 }
+/* hover:text-blueGray-500 */
+button.btn {
+  @apply mx-2 border-2 px-2 rounded-lg border-gray-900 
+}
+
+button.primary {
+  @apply font-bold bg-green-400 hover:bg-green-300 active:bg-green-600
+}
+
+button.secondary {
+  @apply bg-white hover:bg-gray-50
+}
 </style>
