@@ -1,12 +1,12 @@
 <template>
     <div
         id="generateNew-container"
-        class="pb-1"
+        class="generateContainer"
     >
-        <label for="newSeed" class="font-bold">Seed: </label>
+        <label for="newSeed" class="ml-1 font-bold">Seed: </label>
         <input v-model="newSeed" type="text">
         <button @click="generate()" class="btn primary">Generate</button>
-        <div class="float-right"><b>Current Seed:</b> {{ currentSeed }}</div>
+        <div class="float-right mr-1 mt-0.5"><b>Current Seed:</b> {{ currentSeed }}</div>
     </div>
     <div v-if="areOptionsExpanded">
         options expanded :3
@@ -68,5 +68,7 @@ export default class GenerateNewBoard extends Vue
 </script>
 
 <style lang="postcss" scoped>
-
+.generateContainer {
+    @apply mb-2 py-1 bg-gray-400 bg-opacity-75 rounded-lg border border-white
+}
 </style>
