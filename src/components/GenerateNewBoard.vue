@@ -18,6 +18,7 @@
 // DO NOT generate the board in here, only emit the updated text seed.
 import {Options, Vue} from 'vue-class-component';
 import GeneratorOptions from '@/models/GeneratorOptions';
+import BingoBoardModule from '@/store/modules/bingo-board/bingo-board-module';
 
 @Options({
     props: {
@@ -44,6 +45,10 @@ export default class GenerateNewBoard extends Vue
         this.generatorOptions = new GeneratorOptions('BoI', '1.1.1');
         this.generatorOptions.textSeed = '1';
         this.generatorOptions.enableDifficultyRandomness = true;
+
+        if (BingoBoardModule.isBingoBoardLoaded) {
+            this.generatorOptions = BingoBoardModule.generatorOptions;
+        }
     }
 
     get areOptionsExpanded() : boolean {
